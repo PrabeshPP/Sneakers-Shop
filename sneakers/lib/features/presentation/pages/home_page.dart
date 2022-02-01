@@ -29,16 +29,17 @@ class _HomePageState extends State<HomePage> {
         ),
         body: pages.elementAt(selectedIndex),
         bottomNavigationBar:BottomNavigationBar(
+          type: BottomNavigationBarType.shifting,
       items: const [
-        BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home" ),
         BottomNavigationBarItem(
-            icon: Icon(Icons.notifications), label: "Notifications"),
+            icon: Icon(Icons.notifications), label: "Home"),
         BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.cart_fill), label: "Cart"),
         BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.profile_circled), label: "Profile"),
       ],
-      selectedFontSize: 12,
+      selectedFontSize: 16,
       selectedItemColor: Colors.deepOrangeAccent,
       currentIndex: selectedIndex,
       onTap: _onTapped,
