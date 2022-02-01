@@ -4,8 +4,9 @@ import 'package:google_fonts/google_fonts.dart';
 
 class Mytheme {
   static lightTheme(BuildContext context) => ThemeData(
-      canvasColor: creamColor,
-      cardColor: Colors.deepOrangeAccent,
+      canvasColor:Colors.white,
+      cardColor: darkCreamColor ,
+      primaryColor: Colors.deepOrangeAccent,
       appBarTheme: AppBarTheme(
           elevation: 10.0,
           backgroundColor: Colors.white,
@@ -21,18 +22,18 @@ class Mytheme {
               );
 
   static darkTheme(BuildContext context) => ThemeData(
-    canvasColor: darkCreamColor,
-    cardColor: Colors.white,
+    canvasColor: Colors.black,
+    cardColor: creamColor,
      appBarTheme: AppBarTheme(
           elevation: 10.0,
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.black,
           titleTextStyle: TextStyle(
+           
               fontSize: 25,
               color: Colors.white,
               fontFamily: GoogleFonts.lato().fontFamily),
           systemOverlayStyle: const SystemUiOverlayStyle(
-              statusBarBrightness: Brightness.dark,
-              statusBarColor: Colors.transparent,
+              statusBarColor: Colors.black,
               statusBarIconBrightness: Brightness.light)
               )
 
@@ -40,5 +41,5 @@ class Mytheme {
   );
 
   static Color creamColor = const Color(0xfff5f5f5);
-  static Color darkCreamColor = Colors.blueGrey.shade800;
+  static Color darkCreamColor = Colors.blueGrey.shade900;
 }

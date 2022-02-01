@@ -9,6 +9,15 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title:const  Text("Sneakers Shop"),
       ),
+      body: Column(
+        children: [
+          Container(
+            color: Theme.of(context).cardColor,
+            height: MediaQuery.of(context).size.height*0.1,
+            width: MediaQuery.of(context).size.width*0.2,
+          )
+        ],
+      ),
     );
   }
 }
