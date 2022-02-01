@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:nepseapp/features/presentation/app_view.dart';
-import 'package:nepseapp/features/presentation/pages/home_page.dart';
 import 'package:nepseapp/features/presentation/widgets/utils/theme.dart';
 
 void main() {
   runApp(const MyApp());
+  
 }
 
 class MyApp extends StatelessWidget {

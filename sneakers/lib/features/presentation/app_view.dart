@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:nepseapp/features/presentation/pages/cart_page.dart';
+import 'package:nepseapp/features/presentation/pages/home_page.dart';
 import 'package:nepseapp/features/presentation/pages/login_page.dart';
 
 
@@ -14,7 +15,7 @@ class AppView extends StatefulWidget {
 
 class _AppViewState extends State<AppView> {
    int selectedIndex = 0;
-  List<Widget> pages = const [Profile(), Profile(), CartPage(), CartPage()];
+  List<Widget> pages = const [HomePage(), Profile(), CartPage(), CartPage()];
   void _onTapped(int value) {
     setState(() {
       selectedIndex = value;

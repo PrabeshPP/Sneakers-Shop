@@ -7,6 +7,12 @@ class Mytheme {
       canvasColor:Colors.white,
       cardColor: darkCreamColor ,
       primaryColor: Colors.deepOrangeAccent,
+     bottomNavigationBarTheme:const BottomNavigationBarThemeData(
+       
+     ),
+     buttonBarTheme:const ButtonBarThemeData(
+       
+     ),
       appBarTheme: AppBarTheme(
           elevation: 10.0,
           backgroundColor: Colors.white,
