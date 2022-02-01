@@ -25,7 +25,6 @@ class Mytheme {
               fontFamily: GoogleFonts.lato().fontFamily),
             
           systemOverlayStyle: const SystemUiOverlayStyle(
-            systemNavigationBarColor: Colors.teal,
               statusBarBrightness: Brightness.light,
               statusBarColor: Colors.transparent,
               statusBarIconBrightness: Brightness.dark)
