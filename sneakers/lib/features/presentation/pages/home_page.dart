@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:nepseapp/features/presentation/pages/cart_page.dart';
 import 'package:nepseapp/features/presentation/pages/login_page.dart';
+
+
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -10,10 +13,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List<Widget> pages = [
-    Profile(),
-    
-  ];
+   int selectedIndex = 0;
+  List<Widget> pages = const [Profile(), Profile(), CartPage(), CartPage()];
+  void _onTapped(int value) {
+    setState(() {
+      selectedIndex = value;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,24 +27,8 @@ class _HomePageState extends State<HomePage> {
           shape: Border(bottom: BorderSide(color: Theme.of(context).cardColor)),
           title: const Text("Sneakers Shop"),
         ),
-        body: Column(
-          children: [],
-        ),
-        bottomNavigationBar: const BottomAppbar());
-  }
-}
-
-class BottomAppbar extends StatefulWidget {
-  const BottomAppbar({Key? key}) : super(key: key);
-
-  @override
-  State<BottomAppbar> createState() => _BottomAppbarState();
-}
-
-class _BottomAppbarState extends State<BottomAppbar> {
-  @override
-  Widget build(BuildContext context) {
-    return BottomNavigationBar(
+        body: pages.elementAt(selectedIndex),
+        bottomNavigationBar:BottomNavigationBar(
       items: const [
         BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
         BottomNavigationBarItem(
@@ -48,8 +38,14 @@ class _BottomAppbarState extends State<BottomAppbar> {
         BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.profile_circled), label: "Profile"),
       ],
-      selectedFontSize: 20,
+      selectedFontSize: 12,
       selectedItemColor: Colors.deepOrangeAccent,
-    );
+      currentIndex: selectedIndex,
+      onTap: _onTapped,
+      showSelectedLabels: true,
+      showUnselectedLabels: true,
+    ) );
   }
 }
+
+
