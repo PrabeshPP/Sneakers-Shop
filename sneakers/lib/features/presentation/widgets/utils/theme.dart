@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class Mytheme {
   static lightTheme(BuildContext context) => ThemeData(
+    
       canvasColor:Colors.white,
       cardColor: darkCreamColor ,
       primaryColor: Colors.deepOrangeAccent,
@@ -13,14 +14,18 @@ class Mytheme {
      buttonBarTheme:const ButtonBarThemeData(
        
      ),
+     
       appBarTheme: AppBarTheme(
           elevation: 10.0,
           backgroundColor: Colors.white,
           titleTextStyle: TextStyle(
+
               fontSize: 25,
               color: Colors.black,
               fontFamily: GoogleFonts.lato().fontFamily),
+            
           systemOverlayStyle: const SystemUiOverlayStyle(
+            systemNavigationBarColor: Colors.teal,
               statusBarBrightness: Brightness.light,
               statusBarColor: Colors.transparent,
               statusBarIconBrightness: Brightness.dark)
