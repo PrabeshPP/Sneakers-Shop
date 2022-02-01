@@ -33,18 +33,19 @@ class _HomePageState extends State<HomePage> {
       items: const [
         BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home" ),
         BottomNavigationBarItem(
-            icon: Icon(Icons.notifications), label: "Home"),
+            icon: Icon(Icons.notifications), label: "Notifications"),
         BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.cart_fill), label: "Cart"),
         BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.profile_circled), label: "Profile"),
       ],
-      selectedFontSize: 16,
-      selectedItemColor: Colors.deepOrangeAccent,
+      selectedFontSize: 14,
+      selectedItemColor: Colors.teal,
       currentIndex: selectedIndex,
       onTap: _onTapped,
       showSelectedLabels: true,
       showUnselectedLabels: true,
+      unselectedFontSize: 12,
     ) );
   }
 }
