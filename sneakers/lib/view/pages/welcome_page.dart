@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nepseapp/view/app_view.dart';
 import 'package:nepseapp/view/widgets/utils/theme.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -9,9 +10,9 @@ class WelcomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
+    return Scaffold(
       
-      child: Container(
+     body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
@@ -53,38 +54,29 @@ class WelcomePage extends StatelessWidget {
                 color: Theme.of(context).primaryColor
               ),),
             ),
-            InkWell(
-              onTap: (){
-
-              },
-              child: Padding(
-                padding:  EdgeInsets.only(top:MediaQuery.of(context).size.height*0.3,
-                left: MediaQuery.of(context).size.width*0.25),
-                child: Container(
-                  height: MediaQuery.of(context).size.height*0.05,
-                  width: MediaQuery.of(context).size.width*0.56,
-                  decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 202, 8, 236),
-                    borderRadius: BorderRadius.circular(20.0)
-                  ),
-                  child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                    // ignore: prefer_const_literals_to_create_immutables
-                    children: [
-                      Text("Continue",
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white
-                      ),),
-                      Padding(
-                        padding: const EdgeInsets.only(left:3.0),
-                        child: Icon(Icons.arrow_forward,
-                        color: Colors.white,),
-                      )
-                    ],
-                  ),
-                ),
+            Ink(
+              height: MediaQuery.of(context).size.height*0.05,
+              width: MediaQuery.of(context).size.width*0.56,
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 202, 8, 236),
+                borderRadius: BorderRadius.circular(20.0)
+              ),
+              child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+                // ignore: prefer_const_literals_to_create_immutables
+                children: [
+                  Text("Continue",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white
+                  ),),
+                  Padding(
+                    padding: const EdgeInsets.only(left:3.0),
+                    child: Icon(Icons.arrow_forward,
+                    color: Colors.white,),
+                  )
+                ],
               ),
             )
           ]),

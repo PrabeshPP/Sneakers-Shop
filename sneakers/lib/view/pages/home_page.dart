@@ -8,8 +8,16 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: const Center(
-        child: Text("HomePage"),
+      child:  Column(
+        children: [
+          Center(
+            child:Ink(
+              height:100 ,
+              width: 100,
+              color: Colors.red,
+            ),
+          ),
+        ],
       ),
       
     );
