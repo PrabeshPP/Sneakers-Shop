@@ -1,6 +1,6 @@
-# nepseapp
+# Sneakers App
 
-A new Flutter project.
+A flutter project for sneakers-shop
 
 ## Getting Started
 
