@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nepseapp/view/app_view.dart';
+import 'package:nepseapp/view/pages/welcome_page.dart';
 import 'package:nepseapp/view/widgets/utils/theme.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const AppView(),
+      home:const  WelcomePage(),
       themeMode: ThemeMode.light,
       theme: Mytheme.lightTheme(context),
       darkTheme: Mytheme.darkTheme(context),
