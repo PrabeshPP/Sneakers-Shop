@@ -16,8 +16,15 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 <div align="left">
-  <img src="https://github.com/PrabeshPP/Sneakers-Shop/blob/master/sneakers/sc1.jpg" width="250" height="400"/>
-  <img src="https://github.com/PrabeshPP/Sneakers-Shop/blob/master/sneakers/sc2.jpg" width="250" height="400"/>
+  <div>
+    # LightTheme
+    <img src="https://github.com/PrabeshPP/Sneakers-Shop/blob/master/sneakers/sc1.jpg" width="250" height="400"/>
+  <div>
+  <div>
+    # DarkTheme
+    <img src="https://github.com/PrabeshPP/Sneakers-Shop/blob/master/sneakers/sc2.jpg" width="250" height="400"/>
+  <div>
+  
 </div>
 
 
