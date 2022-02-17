@@ -8,21 +8,8 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child:  Column(
-        children: [
-          Center(
-            child:InkWell(
-              onTap: (){
-                
-              },
-              child: Ink(
-                height:100 ,
-                width: 100,
-                color: Colors.red,
-              ),
-            ),
-          ),
-        ],
+      child: const Center(
+        child: Text("HomePage"),
       ),
       
     );
