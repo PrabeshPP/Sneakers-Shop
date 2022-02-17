@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:nepseapp/view/app_view.dart';
 import 'package:nepseapp/view/pages/welcome_page.dart';
 import 'package:nepseapp/view/widgets/utils/theme.dart';
 
