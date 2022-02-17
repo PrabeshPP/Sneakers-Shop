@@ -73,8 +73,15 @@ class WelcomePage extends StatelessWidget {
                     children: [
                       Text("Continue",
                       style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
                         color: Colors.white
                       ),),
+                      Padding(
+                        padding: const EdgeInsets.only(left:3.0),
+                        child: Icon(Icons.arrow_forward,
+                        color: Colors.white,),
+                      )
                     ],
                   ),
                 ),
