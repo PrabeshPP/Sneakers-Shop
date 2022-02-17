@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nepseapp/features/presentation/app_view.dart';
-import 'package:nepseapp/features/presentation/widgets/utils/theme.dart';
+import 'package:nepseapp/view/app_view.dart';
+import 'package:nepseapp/view/widgets/utils/theme.dart';
 
 void main() {
   runApp(

@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:nepseapp/features/presentation/pages/cart_page.dart';
-import 'package:nepseapp/features/presentation/pages/home_page.dart';
-import 'package:nepseapp/features/presentation/pages/login_page.dart';
+import 'package:nepseapp/view/pages/cart_page.dart';
+import 'package:nepseapp/view/pages/home_page.dart';
+import 'package:nepseapp/view/pages/login_page.dart';
+
 
 
 
