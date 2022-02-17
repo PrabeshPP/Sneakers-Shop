@@ -11,10 +11,15 @@ class HomePage extends StatelessWidget {
       child:  Column(
         children: [
           Center(
-            child:Ink(
-              height:100 ,
-              width: 100,
-              color: Colors.red,
+            child:InkWell(
+              onTap: (){
+                
+              },
+              child: Ink(
+                height:100 ,
+                width: 100,
+                color: Colors.red,
+              ),
             ),
           ),
         ],
