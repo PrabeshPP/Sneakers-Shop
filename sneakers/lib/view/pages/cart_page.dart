@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CartPage extends StatelessWidget {
@@ -10,7 +11,8 @@ class CartPage extends StatelessWidget {
       height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,
       child: const Center(
-        child: Text("Hi From Cart Page"),
+        child: Icon(CupertinoIcons.cart,
+        size: 50,)
       ),
       
     );
