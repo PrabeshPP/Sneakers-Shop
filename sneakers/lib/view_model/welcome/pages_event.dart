@@ -6,3 +6,7 @@ abstract class PagesEvent extends Equatable {
   @override
   List<Object> get props => [];
 }
+
+class Initialpage extends PagesEvent{}
+
+class LaterPage extends PagesEvent{}
