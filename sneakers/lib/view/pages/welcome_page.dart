@@ -1,12 +1,20 @@
 // ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nepseapp/view/app_view.dart';
-import 'package:nepseapp/view/widgets/utils/theme.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-class WelcomePage extends StatelessWidget {
+import '../../main.dart';
+
+class WelcomePage extends StatefulWidget {
   const WelcomePage({Key? key}) : super(key: key);
+
+  @override
+  State<WelcomePage> createState() => _WelcomePageState();
+}
+
+class _WelcomePageState extends State<WelcomePage> {
+  final Future<SharedPreferences> _pref = SharedPreferences.getInstance();
 
   @override
   Widget build(BuildContext context) {
@@ -46,13 +54,15 @@ class WelcomePage extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.22,
-              left: MediaQuery.of(context).size.width*0.23),
+          padding: EdgeInsets.only(
+              top: MediaQuery.of(context).size.height * 0.22,
+              left: MediaQuery.of(context).size.width * 0.23),
           child: InkWell(
             borderRadius: BorderRadius.circular(20.0),
             onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => AppView()));
+              seen1();
+
+              print(seen);
             },
             child: Ink(
               height: MediaQuery.of(context).size.height * 0.05,
@@ -85,5 +95,11 @@ class WelcomePage extends StatelessWidget {
         )
       ]),
     );
+  }
+
+  Future<void> seen1() async {
+    SharedPreferences prefs = await _pref;
+    await prefs.setBool('Seen', false).then((value) => Navigator.push(
+        context, MaterialPageRoute(builder: (context) => AppView())));
   }
 }
