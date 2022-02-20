@@ -62,7 +62,7 @@ class _WelcomePageState extends State<WelcomePage> {
             onTap: () {
               seen1();
 
-              print(seen);
+           
             },
             child: Ink(
               height: MediaQuery.of(context).size.height * 0.05,
@@ -99,7 +99,7 @@ class _WelcomePageState extends State<WelcomePage> {
 
   Future<void> seen1() async {
     SharedPreferences prefs = await _pref;
-    await prefs.setBool('Seen', false).then((value) => Navigator.push(
+    await prefs.setBool('Seen', true).then((value) => Navigator.push(
         context, MaterialPageRoute(builder: (context) => AppView())));
   }
 }
