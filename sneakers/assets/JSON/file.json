@@ -4,27 +4,31 @@
             "id":1,
             "name":"Adidas",
             "color":"Mix(Red-Black)",
-            "image_url":"assets/images/AirJordan.png"
+            "imageUrl":"assets/images/AirJordan.png",
+            "price":1500
 
         },
         {
             "id":2,
             "name":"Puma",
             "color":"Green",
-            "image_url":"assets/images/Puma.png"
+            "imageUrl":"assets/images/Puma.png",
+            "price":10000
 
         },
         {
             "id":3,
             "name":"Vans",
             "color":"Black",
-            "image_url":"assets/images/Vans.png"
+            "imageUrl":"assets/images/Vans.png",
+            "price":1900
         },
         {
             "id":4,
             "name":"Addidas(Running Cartoon)",
             "color":"White",
-            "image_url":"assets/images/RunningCartoon.png"
+            "imageUrl":"assets/images/RunningCartoon.png",
+            "price":2000
 
         }
         
