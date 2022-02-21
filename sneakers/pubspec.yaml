@@ -34,13 +34,15 @@ dependencies:
     sdk: flutter
   google_fonts: ^2.2.0
   json_annotation: ^4.4.0
-  json_serializable: ^6.1.4
+
   shared_preferences: ^2.0.13
 
 dev_dependencies:
+  build_runner: ^2.1.7
   flutter_lints: ^1.0.0
   flutter_test:
     sdk: flutter
+  json_serializable: ^6.1.4
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
