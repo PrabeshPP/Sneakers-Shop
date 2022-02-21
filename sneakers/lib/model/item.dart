@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 
+@Json
 class Item extends Equatable {
   final int id;
   final String name;
