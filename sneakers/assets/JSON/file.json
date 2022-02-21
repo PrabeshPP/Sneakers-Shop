@@ -3,9 +3,31 @@
         {
             "id":1,
             "name":"Adidas",
-            "color":"Pink",
-            "image_url":""
+            "color":"Mix(Red-Black)",
+            "image_url":"assets/images/AirJordan.png"
+
+        },
+        {
+            "id":2,
+            "name":"Puma",
+            "color":"Green",
+            "image_url":"assets/images/Puma.png"
+
+        },
+        {
+            "id":3,
+            "name":"Vans",
+            "color":"Black",
+            "image_url":"assets/images/Vans.png"
+        },
+        {
+            "id":4,
+            "name":"Addidas(Running Cartoon)",
+            "color":"White",
+            "image_url":"assets/images/RunningCartoon.png"
 
         }
+        
+
     ]
 }
