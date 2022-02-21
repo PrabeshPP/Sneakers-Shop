@@ -4,8 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:nepseapp/view/app_view.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../main.dart';
-
 class WelcomePage extends StatefulWidget {
   const WelcomePage({Key? key}) : super(key: key);
 
@@ -28,7 +26,7 @@ class _WelcomePageState extends State<WelcomePage> {
             height: MediaQuery.of(context).size.height * 0.3,
             width: MediaQuery.of(context).size.width * 0.7,
             child: Image.asset(
-              "assets/welcome_shoes.png",
+              "assets/images/welcome_shoes.png",
               fit: BoxFit.contain,
             ),
           ),

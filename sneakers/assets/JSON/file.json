@@ -1,0 +1,11 @@
+{
+    "products":[
+        {
+            "id":1,
+            "name":"Adidas",
+            "color":"Pink",
+            "image_url":""
+
+        }
+    ]
+}
