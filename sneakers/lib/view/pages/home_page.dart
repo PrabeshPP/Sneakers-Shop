@@ -124,7 +124,7 @@ class FooterContainer extends StatelessWidget {
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
-                            fontFamily: GoogleFonts.lato().fontFamily
+                            fontFamily: GoogleFonts.saira().fontFamily
                           ),),),
                           height: MediaQuery.of(context).size.height * 0.04,
                           width: MediaQuery.of(context).size.width *0.18,
