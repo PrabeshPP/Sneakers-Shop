@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:nepseapp/repository/itemservices.dart';
 import 'package:nepseapp/view/app_view.dart';
 import 'package:nepseapp/view/pages/welcome_page.dart';
 import 'package:nepseapp/view/widgets/utils/routes.dart';
 import 'package:nepseapp/view/widgets/utils/theme.dart';
+import 'package:nepseapp/view_model/home_Item/bloc/home_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 bool? seen;
@@ -13,22 +16,28 @@ void main() async {
   runApp(
     MyApp(
       appRouter: AppRouter(),
+      itemServices: ItemServices(),
     ),
   );
 }
 
 class MyApp extends StatelessWidget {
   final AppRouter appRouter;
-  const MyApp({Key? key, required this.appRouter}) : super(key: key);
+  final ItemServices itemServices;
+  const MyApp({Key? key, required this.appRouter, required this.itemServices})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.light,
-      theme: Mytheme.lightTheme(context),
-      darkTheme: Mytheme.darkTheme(context),
-      home: seen! ? const AppView() : const WelcomePage(),
+    return BlocProvider(
+      create: (context) => HomeBloc(itemServices: itemServices),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        themeMode: ThemeMode.light,
+        theme: Mytheme.lightTheme(context),
+        darkTheme: Mytheme.darkTheme(context),
+        home: seen! ? const AppView() : const WelcomePage(),
+      ),
     );
   }
 }
