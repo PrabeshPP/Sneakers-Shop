@@ -11,10 +11,10 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   HomeBloc({required ItemServices itemServices})
       : _itemServices = itemServices,
         super(HomeInitial()) {
-    on<HomeEvent>(getItems);
+    on<ItemLoading>(getItems);
   }
 
-  Future<void>? getItems(HomeEvent event, Emitter<HomeState> emit) async {
+  Future<void>? getItems(ItemLoading event, Emitter<HomeState> emit) async {
     final List<Item> itemList = await _itemServices.getItem();
     try {
       if (itemList.isEmpty) {

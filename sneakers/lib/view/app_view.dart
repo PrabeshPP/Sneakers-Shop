@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:nepseapp/repository/itemservices.dart';
 import 'package:nepseapp/view/pages/cart_page.dart';
 import 'package:nepseapp/view/pages/home_page.dart';
 import 'package:nepseapp/view/pages/login_page.dart';
@@ -8,6 +9,7 @@ import 'package:nepseapp/view/pages/login_page.dart';
 
 
 class AppView extends StatefulWidget {
+  
   const AppView({Key? key}) : super(key: key);
 
   @override
@@ -15,8 +17,10 @@ class AppView extends StatefulWidget {
 }
 
 class _AppViewState extends State<AppView> {
+
+  
    int selectedIndex = 0;
-  List<Widget> pages = const [HomePage(), Profile(), CartPage(), CartPage()];
+  List<Widget> pages =  [HomePage(itemServices:ItemServices()), Profile(), CartPage(), CartPage()];
   void _onTapped(int value) {
     setState(() {
       selectedIndex = value;

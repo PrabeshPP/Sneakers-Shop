@@ -1,7 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nepseapp/view/app_view.dart';
+import 'package:nepseapp/view_model/home_Item/bloc/home_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class WelcomePage extends StatefulWidget {
@@ -59,8 +61,6 @@ class _WelcomePageState extends State<WelcomePage> {
             borderRadius: BorderRadius.circular(20.0),
             onTap: () {
               seen1();
-
-           
             },
             child: Ink(
               height: MediaQuery.of(context).size.height * 0.05,
@@ -99,5 +99,6 @@ class _WelcomePageState extends State<WelcomePage> {
     SharedPreferences prefs = await _pref;
     await prefs.setBool('Seen', true).then((value) => Navigator.push(
         context, MaterialPageRoute(builder: (context) => AppView())));
+    BlocProvider.of<HomeBloc>(context).add(ItemLoading());
   }
 }
