@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
             return GridView.builder(
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
-                    mainAxisExtent: MediaQuery.of(context).size.height * 0.3),
+                    mainAxisExtent: MediaQuery.of(context).size.height * 0.31),
                 itemCount: state.listItem.length,
                 itemBuilder: ((context, index) {
                   var item = state.listItem[index];
@@ -76,7 +76,6 @@ class CatlogItems extends StatelessWidget {
 
             //! Heart and the Buy button Widget container
             const FooterContainer()
-           
           ],
         ),
       ),
@@ -84,60 +83,47 @@ class CatlogItems extends StatelessWidget {
   }
 }
 
-
-
 class FooterContainer extends StatelessWidget {
-  const FooterContainer({ Key? key }) : super(key: key);
+  const FooterContainer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-              height: MediaQuery.of(context).size.height * 0.06444,
-              decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(16.0),
-                      bottomRight: Radius.circular(16.0))),
-              child:Row(
-                children: [
-                  IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        CupertinoIcons.heart,
-                        color: Colors.red,
-                      )),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 39.0),
-                    child: Material(
-                      borderRadius:BorderRadius.circular(16.0) ,
-                      child: InkWell(
-                        borderRadius: BorderRadius.circular(16.0),
-                        onTap: () {},
-                        child: Ink(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(16.0),
-                            color: Colors.red,
-                            
-                          ),
-                          child:  Center(child: Text("Buy",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: GoogleFonts.saira().fontFamily
-                          ),),),
-                          height: MediaQuery.of(context).size.height * 0.04,
-                          width: MediaQuery.of(context).size.width *0.18,
-                          
-                        ),
-                      ),
-                    ),
-                  )
-                ],
-              )
-            );
-    
-    
-    
-    
-     
+    return Row(
+      children: [
+        IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              CupertinoIcons.heart,
+              color: Colors.red,
+            )),
+        Padding(
+          padding: const EdgeInsets.only(left: 39.0),
+          child: Material(
+            borderRadius: BorderRadius.circular(16.0),
+            child: InkWell(
+              borderRadius: BorderRadius.circular(16.0),
+              onTap: () {},
+              child: Ink(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(16.0),
+                  color: Colors.red,
+                ),
+                child: Center(
+                  child: Text(
+                    "Buy",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: GoogleFonts.saira().fontFamily),
+                  ),
+                ),
+                height: MediaQuery.of(context).size.height * 0.04,
+                width: MediaQuery.of(context).size.width * 0.18,
+              ),
+            ),
+          ),
+        )
+      ],
+    );
   }
 }
