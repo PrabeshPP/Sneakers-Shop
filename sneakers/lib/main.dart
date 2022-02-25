@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:nepseapp/repository/itemservices.dart';
 import 'package:nepseapp/view/app_view.dart';
 import 'package:nepseapp/view/pages/welcome_page.dart';
 import 'package:nepseapp/view/widgets/utils/routes.dart';
 import 'package:nepseapp/view/widgets/utils/theme.dart';
-import 'package:nepseapp/view_model/home_Item/bloc/home_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 bool? seen;
