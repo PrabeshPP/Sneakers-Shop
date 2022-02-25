@@ -20,7 +20,7 @@ class _AppViewState extends State<AppView> {
 
   
    int selectedIndex = 0;
-  List<Widget> pages =  [HomePage(itemServices:ItemServices()), Profile(), CartPage(), CartPage()];
+  List<Widget> pages =  [HomePage(itemServices:ItemServices()), CartPage(), CartPage(), LoginPage()];
   void _onTapped(int value) {
     setState(() {
       selectedIndex = value;
