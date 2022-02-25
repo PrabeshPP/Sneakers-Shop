@@ -11,7 +11,14 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       body:Container(
       height: Size.height,
-      width: Size.width,)
+      width: Size.width,
+      child: Column(
+        children:const  [
+          Text("Millions of Sneakers at your palm")
+        ],
+      ),
+      
+      )
 
       
     );
