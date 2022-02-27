@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nepseapp/view/widgets/clipper/big_clipper.dart';
@@ -153,7 +154,7 @@ class LoginUi extends StatelessWidget {
               //! Google Sigin Button
               Positioned(
               top: size.height * 0.83,
-              left: size.width * 0.03,
+              right: size.width * 0.03,
               child: Material(
                  borderRadius: BorderRadius.circular(20.0),
                 child: InkWell(
@@ -172,9 +173,8 @@ class LoginUi extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children:const [
-                        Icon(Icons.facebook,
-                        color: Colors.white,),
-                        Text("Facebook",
+                        Icon(Icons.cloud),
+                        Text("Google",
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold
