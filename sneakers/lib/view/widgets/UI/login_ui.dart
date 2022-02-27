@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nepseapp/view/widgets/clipper/big_clipper.dart';
 import 'package:nepseapp/view/widgets/clipper/small_clipper.dart';
 
 class LoginUi extends StatelessWidget {
@@ -17,9 +18,13 @@ class LoginUi extends StatelessWidget {
            width: size.width,
            
          ),
-         Positioned(
+        //  const Positioned(
+        //    right: 0,
+        //    child:BigClipper()),
+         const Positioned(
            right: 0,
-           child:LeftClipper())
+           child:LeftClipper()),
+
 
         ],
       ),
