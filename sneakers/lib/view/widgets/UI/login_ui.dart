@@ -17,13 +17,23 @@ class LoginUi extends StatelessWidget {
            height: size.height,
            width: size.width,
            
+           
          ),
-        //  const Positioned(
-        //    right: 0,
-        //    child:BigClipper()),
+         const Positioned(
+           right: 0,
+           child:BigClipper()),
          const Positioned(
            right: 0,
            child:LeftClipper()),
+
+            Positioned(
+             top: size.height*0.1,
+             left: size.width*0.4
+             ,child: const Text("Login",
+           style: TextStyle(color: Colors.white,
+           fontSize: 35,
+           fontWeight: FontWeight.bold),
+           ))
 
 
         ],

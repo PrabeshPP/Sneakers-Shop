@@ -8,9 +8,13 @@ class LeftClipper extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     return ClipPath(
       child: Container(
-        height: size.height * 0.65,
+        height: size.height * 0.8,
         width: size.width,
-        decoration: const BoxDecoration(color: Colors.red),
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(colors:  [Color.fromARGB(255, 230, 49, 109),Color.fromARGB(255, 74, 173, 253)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight)
+        ),
       ),
       clipper: MyCustomClipper(),
     );
@@ -22,12 +26,12 @@ class MyCustomClipper extends CustomClipper<Path> {
   Path getClip(Size size) {
     Path path = Path();
     path.lineTo(0, size.height * 0.7);
-    Offset firstControlPoint = Offset(size.width * 0.2, size.height * 0.75);
-    Offset firstEndPoint = Offset(size.width * 0.48, size.height * 0.68);
+    Offset firstControlPoint = Offset(size.width * 0.2, size.height * 0.72);
+    Offset firstEndPoint = Offset(size.width * 0.38, size.height * 0.66);
     path.quadraticBezierTo(firstControlPoint.dx, firstControlPoint.dy,
         firstEndPoint.dx, firstEndPoint.dy);
-    Offset secondControlPoint = Offset(size.width * 0.8, size.height * 0.6);
-    Offset secondEndPoint = Offset(size.width, size.height * 0.7);
+    Offset secondControlPoint = Offset(size.width * 0.68, size.height * 0.56);
+    Offset secondEndPoint = Offset(size.width, size.height * 0.65);
     path.quadraticBezierTo(secondControlPoint.dx, secondControlPoint.dy,
         secondEndPoint.dx, secondEndPoint.dy);
     path.lineTo(size.width, 0);
