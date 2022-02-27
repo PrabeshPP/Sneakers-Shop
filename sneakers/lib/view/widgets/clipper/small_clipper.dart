@@ -8,7 +8,7 @@ class LeftClipper extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     return ClipPath(
       child: Container(
-        height: size.height * 0.8,
+        height: size.height ,
         width: size.width,
         decoration: const BoxDecoration(
           gradient: LinearGradient(colors:  [Color.fromARGB(255, 230, 49, 109),Color.fromARGB(255, 74, 173, 253)],
