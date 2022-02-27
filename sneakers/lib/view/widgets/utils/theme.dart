@@ -23,6 +23,7 @@ class Mytheme {
       canvasColor: Colors.black,
       cardColor: creamColor,
       primaryColor: textDarkColor,
+      
       appBarTheme: AppBarTheme(
           elevation: 10.0,
           backgroundColor: Colors.black,
@@ -32,7 +33,7 @@ class Mytheme {
               fontFamily: GoogleFonts.lato().fontFamily),
           systemOverlayStyle: const SystemUiOverlayStyle(
               statusBarColor: Colors.black,
-              statusBarIconBrightness: Brightness.light)));
+              statusBarIconBrightness: Brightness.dark)));
 
   static Color creamColor = const Color(0xfff5f5f5);
   static Color darkCreamColor = Colors.blueGrey.shade900;

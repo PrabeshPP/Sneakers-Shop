@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:nepseapp/repository/itemservices.dart';
+import 'package:nepseapp/view/app_view.dart';
+import 'package:nepseapp/view/pages/welcome_page.dart';
 import 'package:nepseapp/view/widgets/UI/login_ui.dart';
 import 'package:nepseapp/view/widgets/utils/routes.dart';
 import 'package:nepseapp/view/widgets/utils/theme.dart';
@@ -16,6 +19,7 @@ void main() async {
       itemServices: ItemServices(),
     ),
   );
+  
 }
 
 class MyApp extends StatelessWidget {
