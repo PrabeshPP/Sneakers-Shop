@@ -77,11 +77,13 @@ class LoginUi extends StatelessWidget {
           Positioned(
               left: size.width * 0.31,
               top: size.height * 0.5,
-              child: const Text(
+              child: TextButton(onPressed: (){
+
+              }, child: const Text(
                 "Forgot your Password ?",
                 style:
                     TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-              )),
+              ))),
 
           //! or Connect With ----Text
           Positioned(
@@ -164,14 +166,15 @@ class LoginUi extends StatelessWidget {
                     width: size.width * 0.4,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20.0),
-                      color: Colors.blue,
+                      color: Color.fromARGB(255, 133, 59, 36),
                     ),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: const [
-                        Icon(Icons.cloud),
-                        Text(
+                      children:  [
+                        Image.asset("assets/images/google.png",
+                        height: 20,),
+                        const Text(
                           "Google",
                           style: TextStyle(
                               color: Colors.white, fontWeight: FontWeight.bold),
