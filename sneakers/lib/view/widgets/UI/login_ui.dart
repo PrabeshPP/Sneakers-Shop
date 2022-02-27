@@ -183,10 +183,13 @@ class LoginUi extends StatelessWidget {
               )),
 
           Positioned(
-              left: size.width * 0.03,
-              top: size.height*0.94,
+              left: size.width * 0.25,
+              top: size.height * 0.92,
               child: Row(
-                children: const [Text("Don't have an account?")],
+                children:  [const Text("Don't have an account?"),
+                TextButton(onPressed: (){},
+                 child:const  Text("Sign Up"))],
+                
               ))
         ],
       ),
