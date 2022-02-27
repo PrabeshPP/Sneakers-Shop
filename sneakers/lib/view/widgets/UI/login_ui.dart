@@ -13,19 +13,23 @@ class LoginUi extends StatelessWidget {
      
       child: Stack(
         children: [
+          //! Main Big Size Box
          SizedBox(
            height: size.height,
            width: size.width,
-           
-           
          ),
+
+         //! Big Clipper
          const Positioned(
            right: 0,
            child:BigClipper()),
+
+           //!Small Clipper
          const Positioned(
            right: 0,
            child:LeftClipper()),
 
+            //! Text Login
             Positioned(
              top: size.height*0.1,
              left: size.width*0.4
@@ -33,7 +37,10 @@ class LoginUi extends StatelessWidget {
            style: TextStyle(color: Colors.white,
            fontSize: 35,
            fontWeight: FontWeight.bold),
-           ))
+           )),
+
+           //! TextFormField For the Email
+           
 
 
         ],
