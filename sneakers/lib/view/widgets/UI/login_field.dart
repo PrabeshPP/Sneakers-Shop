@@ -6,7 +6,6 @@ class LoginField extends StatefulWidget {
   @override
   _LoginFieldState createState() => _LoginFieldState();
 }
-
 class _LoginFieldState extends State<LoginField> {
   @override
   Widget build(BuildContext context) {
