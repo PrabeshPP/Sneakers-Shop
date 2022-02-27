@@ -115,76 +115,79 @@ class LoginUi extends StatelessWidget {
 
           //!
 
-
 //! Facebook Login Button
           Positioned(
               top: size.height * 0.83,
               left: size.width * 0.03,
               child: Material(
-                 borderRadius: BorderRadius.circular(20.0),
+                borderRadius: BorderRadius.circular(20.0),
                 child: InkWell(
-                   borderRadius: BorderRadius.circular(20.0),
-                  onTap: (){
-
-                  },
+                  borderRadius: BorderRadius.circular(20.0),
+                  onTap: () {},
                   child: Ink(
                     height: size.height * 0.05,
                     width: size.width * 0.4,
-                    decoration:  BoxDecoration(
+                    decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20.0),
                       color: Colors.blue,
                     ),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children:const [
-                        Icon(Icons.facebook,
-                        color: Colors.white,),
-                        Text("Facebook",
-                        style: TextStyle(
+                      children: const [
+                        Icon(
+                          Icons.facebook,
                           color: Colors.white,
-                          fontWeight: FontWeight.bold
-                        ),)
+                        ),
+                        Text(
+                          "Facebook",
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold),
+                        )
                       ],
                     ),
                   ),
                 ),
               )),
 
-              //! Google Sigin Button
-              Positioned(
+          //! Google Sigin Button
+          Positioned(
               top: size.height * 0.83,
               right: size.width * 0.03,
               child: Material(
-                 borderRadius: BorderRadius.circular(20.0),
+                borderRadius: BorderRadius.circular(20.0),
                 child: InkWell(
-                   borderRadius: BorderRadius.circular(20.0),
-                  onTap: (){
-
-                  },
+                  borderRadius: BorderRadius.circular(20.0),
+                  onTap: () {},
                   child: Ink(
                     height: size.height * 0.05,
                     width: size.width * 0.4,
-                    decoration:  BoxDecoration(
+                    decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20.0),
                       color: Colors.blue,
                     ),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children:const [
+                      children: const [
                         Icon(Icons.cloud),
-                        Text("Google",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold
-                        ),)
+                        Text(
+                          "Google",
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold),
+                        )
                       ],
                     ),
                   ),
                 ),
-              ))
+              )),
 
+          Positioned(
+              left: size.width * 0.03,
+              top: size.height*0.94,
+              child: Row(
+                children: const [Text("Don't have an account?")],
+              ))
         ],
       ),
     );
