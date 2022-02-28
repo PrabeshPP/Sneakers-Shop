@@ -62,11 +62,11 @@ class _LoginFieldState extends State<LoginField> {
                         focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(32.0),
                             borderSide:
-                                const BorderSide(width: 2, color: Colors.teal)),
+                                const BorderSide(width: 3, color: Colors.teal)),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(26.0),
                             borderSide: const BorderSide(
-                                width: 2, color: Colors.black))),
+                                width: 3, color: Colors.black))),
                   ),
                 ),
                 Positioned(
