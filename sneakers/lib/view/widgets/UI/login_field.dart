@@ -14,8 +14,6 @@ class _LoginFieldState extends State<LoginField> {
   Widget build(BuildContext context) {
     return Material(
       child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Stack(
               children: [
@@ -23,6 +21,7 @@ class _LoginFieldState extends State<LoginField> {
                   width: MediaQuery.of(context).size.width * 0.7,
                   child: TextField(
                     decoration: InputDecoration(
+                        hintText:'email or mobile number',
                         contentPadding: EdgeInsets.only(
                             left: MediaQuery.of(context).size.width * 0.1),
                         focusedBorder: OutlineInputBorder(
@@ -54,6 +53,7 @@ class _LoginFieldState extends State<LoginField> {
                     width: MediaQuery.of(context).size.width * 0.7,
                     child: TextField(
                       decoration: InputDecoration(
+                        hintText: "password",
                           contentPadding: EdgeInsets.only(
                               left: MediaQuery.of(context).size.width * 0.1),
                           focusedBorder: OutlineInputBorder(
