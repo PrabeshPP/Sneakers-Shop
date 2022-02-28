@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nepseapp/view/widgets/UI/login_field.dart';
 import 'package:nepseapp/view/widgets/clipper/big_clipper.dart';
 import 'package:nepseapp/view/widgets/clipper/small_clipper.dart';
 
@@ -40,13 +41,10 @@ class LoginUi extends StatelessWidget {
           //! TextFormField For the Email
           Positioned(
               top: size.height * 0.2,
-              left: size.width * 0.4,
-              child: Container(
-                height: 120,
-                width: 80,
-                color: Colors.white,
-              )),
+              left: size.width * 0.15,
+              child: const LoginField()),
 
+          //! Login Button
           Positioned(
             top: size.height * 0.41,
             left: size.width * 0.2,
@@ -77,13 +75,13 @@ class LoginUi extends StatelessWidget {
           Positioned(
               left: size.width * 0.31,
               top: size.height * 0.5,
-              child: TextButton(onPressed: (){
-
-              }, child: const Text(
-                "Forgot your Password ?",
-                style:
-                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-              ))),
+              child: TextButton(
+                  onPressed: () {},
+                  child: const Text(
+                    "Forgot your Password ?",
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.bold),
+                  ))),
 
           //! or Connect With ----Text
           Positioned(
@@ -171,9 +169,11 @@ class LoginUi extends StatelessWidget {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children:  [
-                        Image.asset("assets/images/google.png",
-                        height: 20,),
+                      children: [
+                        Image.asset(
+                          "assets/images/google.png",
+                          height: 20,
+                        ),
                         const Text(
                           "Google",
                           style: TextStyle(
@@ -189,10 +189,10 @@ class LoginUi extends StatelessWidget {
               left: size.width * 0.25,
               top: size.height * 0.92,
               child: Row(
-                children:  [const Text("Don't have an account?"),
-                TextButton(onPressed: (){},
-                 child:const  Text("Sign Up"))],
-                
+                children: [
+                  const Text("Don't have an account?"),
+                  TextButton(onPressed: () {}, child: const Text("Sign Up"))
+                ],
               ))
         ],
       ),
