@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:nepseapp/repository/itemservices.dart';
-import 'package:nepseapp/view/pages/cart_page.dart';
-import 'package:nepseapp/view/pages/home_page.dart';
-import 'package:nepseapp/view/pages/login_page.dart';
+import 'package:nepseapp/view/pages/Home/cart_page.dart';
+import 'package:nepseapp/view/pages/Home/home_page.dart';
+import 'package:nepseapp/view/pages/Home/login_page.dart';
+
+
 
 
 
@@ -20,7 +22,7 @@ class _AppViewState extends State<AppView> {
 
   
    int selectedIndex = 0;
-  List<Widget> pages =  [HomePage(itemServices:ItemServices()), CartPage(), CartPage(), LoginPage()];
+  List<Widget> pages =  [HomePage(itemServices:ItemServices()), CartPage(), CartPage(),LoginPage() ];
   void _onTapped(int value) {
     setState(() {
       selectedIndex = value;
