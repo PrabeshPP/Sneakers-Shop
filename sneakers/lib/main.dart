@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:nepseapp/repository/itemservices.dart';
 import 'package:nepseapp/view/app_view.dart';
-import 'package:nepseapp/view/pages/welcome_page.dart';
-import 'package:nepseapp/view/widgets/UI/login_field.dart';
-import 'package:nepseapp/view/widgets/UI/login_ui.dart';
+import 'package:nepseapp/view/pages/OnBoardingScreen/sigin_up.dart';
+import 'package:nepseapp/view/pages/OnBoardingScreen/welcome_page.dart';
 import 'package:nepseapp/view/widgets/utils/routes.dart';
 import 'package:nepseapp/view/widgets/utils/theme.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -16,7 +14,7 @@ void main() async {
   seen = sharedPreferences.getBool("Seen") ?? false;
   runApp(
     MyApp(
-      appRouter: AppRouter(),
+      
       itemServices: ItemServices(),
     ),
   );
@@ -24,9 +22,9 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  final AppRouter appRouter;
+  
   final ItemServices itemServices;
-  const MyApp({Key? key, required this.appRouter, required this.itemServices})
+  const MyApp({Key? key, required this.itemServices})
       : super(key: key);
 
   @override
@@ -37,7 +35,7 @@ class MyApp extends StatelessWidget {
       theme: Mytheme.lightTheme(context),
       darkTheme: Mytheme.darkTheme(context),
       // home: seen! ? const  AppView() : const WelcomePage(),
-      home: const LoginUi(),
+      home: const SiginUpPage(),
     );
   }
 }
