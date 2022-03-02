@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nepseapp/view/widgets/UI/siginup_UI.dart';
 
-bool isVisible = true;
 
 class SiginUpPage extends StatelessWidget {
   const SiginUpPage({Key? key}) : super(key: key);
