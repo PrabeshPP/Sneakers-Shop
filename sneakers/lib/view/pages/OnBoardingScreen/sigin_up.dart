@@ -7,8 +7,11 @@ class SiginUpPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: Ink(
+    return Scaffold(
+      
+     body: Ink(
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
         decoration:const BoxDecoration(
           gradient: LinearGradient(colors: [Colors.red,Colors.blue]
           ,begin: Alignment.topCenter,

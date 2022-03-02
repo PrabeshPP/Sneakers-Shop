@@ -18,7 +18,7 @@ class SiginUp extends StatelessWidget {
           child: SizedBox(
               width: MediaQuery.of(context).size.width * 0.7,
               child: TextField(
-                cursorColor: Colors.black,
+                cursorColor: Colors.blue,
                 style: const TextStyle(
                     color: Color.fromARGB(255, 255, 253, 253),
                     fontSize: 16,
@@ -42,14 +42,14 @@ class SiginUp extends StatelessWidget {
                 ),
               )),
         ),
-
+    
         // For the Phone or Email field
         Padding(
           padding: EdgeInsets.only(top: size * 0.02),
           child: SizedBox(
               width: MediaQuery.of(context).size.width * 0.7,
               child: TextField(
-                cursorColor: Colors.black,
+                cursorColor: Colors.blue,
                 style: const TextStyle(
                     color: Color.fromARGB(255, 255, 253, 253),
                     fontSize: 16,
@@ -78,7 +78,7 @@ class SiginUp extends StatelessWidget {
               width: MediaQuery.of(context).size.width * 0.7,
               child: TextField(
                 obscureText: isVisible,
-                cursorColor: Colors.teal,
+                cursorColor: Colors.blue,
                 style: const TextStyle(
                     color: Color.fromARGB(255, 255, 253, 253),
                     fontSize: 16,
@@ -101,7 +101,7 @@ class SiginUp extends StatelessWidget {
                           const BorderSide(color: Colors.red, width: 2.0)),
                 ),
               )),
-
+    
               
         ),
         Padding(padding: EdgeInsets.only(top: size * 0.02,
