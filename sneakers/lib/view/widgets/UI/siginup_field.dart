@@ -16,21 +16,27 @@ class SiginUp extends StatelessWidget {
               EdgeInsets.only(top: size* 0.02),
           child: SizedBox(
               width: MediaQuery.of(context).size.width * 0.7,
-              child: const TextField(
+              child: TextField(
                 cursorColor: Colors.black,
-                style: TextStyle(
-                    color: Color.fromARGB(255, 20, 20, 20),
+                style:const  TextStyle(
+                     color: Color.fromARGB(255, 255, 253, 253),
                     fontSize: 16,
                     fontWeight: FontWeight.bold),
                 decoration: InputDecoration(
-                  contentPadding: EdgeInsets.only(top: 3, left: 6),
+                  contentPadding:const  EdgeInsets.only(top: 3, left: 6),
                   hintText: "Name",
+                  hintStyle:const TextStyle(
+                    color: Colors.white
+                  ),
                   enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black, width: 2.0)),
+                    borderRadius: BorderRadius.circular(12.0),
+                      borderSide: const BorderSide(color: Colors.white, width: 2.0)),
                   focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.blue, width: 2.0)),
+                     borderRadius: BorderRadius.circular(12.0),
+                      borderSide: const BorderSide(color: Colors.teal, width: 2.0)),
                   errorBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.red, width: 2.0)),
+                     borderRadius: BorderRadius.circular(12.0),
+                      borderSide: const BorderSide(color: Colors.red, width: 2.0)),
                 ),
               )),
         ),
@@ -40,20 +46,26 @@ class SiginUp extends StatelessWidget {
           padding:  EdgeInsets.only(top: size* 0.02),
           child: SizedBox(
               width: MediaQuery.of(context).size.width * 0.7,
-              child: const TextField(
+              child:  TextField(
                 cursorColor: Colors.black,
-                style: TextStyle(
-                    color: Color.fromARGB(255, 20, 20, 20),
+                style:const  TextStyle(
+                   color: Color.fromARGB(255, 255, 253, 253),
+                   
                     fontSize: 16,
                     fontWeight: FontWeight.bold),
                 decoration: InputDecoration(
-                  contentPadding: EdgeInsets.only(top: 3, left: 6),
+                    hintStyle: const TextStyle(
+                    color: Colors.white
+                  ),
+                  contentPadding: const EdgeInsets.only(top: 3, left: 6),
                   hintText: "Phone or Email",
                   enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black, width: 2.0)),
+                      borderRadius: BorderRadius.circular(12.0),
+                      borderSide: const BorderSide(color: Colors.white, width: 2.0)),
                   focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.blue, width: 2.0)),
-                  errorBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12.0),
+                      borderSide:const BorderSide(color: Colors.teal, width: 2.0)),
+                  errorBorder:const  OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.red, width: 2.0)),
                 ),
               )),
@@ -66,20 +78,26 @@ class SiginUp extends StatelessWidget {
               width: MediaQuery.of(context).size.width * 0.7,
               child:  TextField(
                 obscureText: isVisible,
-                cursorColor: Colors.black,
+                cursorColor: Colors.teal,
                 style:const TextStyle(
-                    color: Color.fromARGB(255, 20, 20, 20),
+                    color: Color.fromARGB(255, 255, 253, 253),
                     fontSize: 16,
                     fontWeight: FontWeight.bold),
-                decoration: const InputDecoration(
-                  contentPadding: EdgeInsets.only(top: 3, left: 6),
+                decoration: InputDecoration(
+                  contentPadding:const EdgeInsets.only(top: 3, left: 6),
                   hintText: "Password",
+                  hintStyle:const TextStyle(
+                    color: Colors.white
+                  ),
                   enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black, width: 2.0)),
+                      borderRadius: BorderRadius.circular(12.0),
+                      borderSide:const BorderSide(color: Colors.white, width: 2.0)),
                   focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.blue, width: 2.0)),
+                      borderRadius: BorderRadius.circular(12.0),
+                      borderSide:const BorderSide(color: Colors.teal, width: 2.0)),
                   errorBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.red, width: 2.0)),
+                      borderRadius: BorderRadius.circular(12.0),
+                      borderSide:const BorderSide(color: Colors.red, width: 2.0)),
                 ),
               )),
         ),

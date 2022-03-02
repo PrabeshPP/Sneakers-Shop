@@ -7,15 +7,37 @@ class SiginUpUI extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("Sneakers",
-        style: TextStyle(
-          fontSize: 30,
-          color: Colors.white,
-          fontFamily: GoogleFonts.anton().fontFamily
-        ),),
-        const SiginUp()
+        Padding(
+          padding:
+              EdgeInsets.only(top: size.height * 0.1, left: size.width * 0.18),
+          child: Row(
+            children: [
+              Text(
+                "Sneakers",
+                style: TextStyle(
+                    fontSize: 40,
+                    color: Colors.white,
+                    fontFamily: GoogleFonts.permanentMarker().fontFamily),
+              ),
+              SizedBox(
+                height: size.height * 0.1,
+                width: size.width * 0.16,
+                child: Image.asset(
+                  "assets/images/shoesIcon.png",
+                  fit: BoxFit.contain,
+                ),
+              )
+            ],
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(left: size.width * 0.15),
+          child: const SiginUp(),
+        )
       ],
     );
   }
