@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nepseapp/view/widgets/UI/Profile/UI1.dart';
+import 'package:nepseapp/view/widgets/UI/Profile/profile_body.dart';
 
 class ProfileUI extends StatelessWidget {
   const ProfileUI({Key? key}) : super(key: key);
@@ -69,6 +70,10 @@ class ProfileUI extends StatelessWidget {
                 ),
                 
             )),
+
+            Positioned(top:size.height*0.3 ,
+            left: size.width*0.04,
+            child:ProfileBody())
       ],
     );
   }
