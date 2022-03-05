@@ -4,6 +4,7 @@ import 'package:nepseapp/repository/itemservices.dart';
 import 'package:nepseapp/view/pages/Home/cart_page.dart';
 import 'package:nepseapp/view/pages/Home/home_page.dart';
 import 'package:nepseapp/view/pages/Home/login_page.dart';
+import 'package:nepseapp/view/pages/Home/profile_page.dart';
 
 
 
@@ -21,8 +22,8 @@ class AppView extends StatefulWidget {
 class _AppViewState extends State<AppView> {
 
   
-   int selectedIndex = 0;
-  List<Widget> pages =  [HomePage(itemServices:ItemServices()), CartPage(), CartPage(),LoginPage() ];
+   int selectedIndex = 3;
+  List<Widget> pages =  [HomePage(itemServices:ItemServices()), CartPage(), CartPage(),ProfilePage() ];
   void _onTapped(int value) {
     setState(() {
       selectedIndex = value;

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nepseapp/repository/itemservices.dart';
 import 'package:nepseapp/view/app_view.dart';
+import 'package:nepseapp/view/pages/Home/profile_page.dart';
 import 'package:nepseapp/view/pages/OnBoardingScreen/sigin_up.dart';
 import 'package:nepseapp/view/pages/OnBoardingScreen/welcome_page.dart';
 import 'package:nepseapp/view/widgets/utils/routes.dart';
@@ -14,18 +15,14 @@ void main() async {
   seen = sharedPreferences.getBool("Seen") ?? false;
   runApp(
     MyApp(
-      
       itemServices: ItemServices(),
     ),
   );
-  
 }
 
 class MyApp extends StatelessWidget {
-  
   final ItemServices itemServices;
-  const MyApp({Key? key, required this.itemServices})
-      : super(key: key);
+  const MyApp({Key? key, required this.itemServices}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -34,8 +31,8 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: Mytheme.lightTheme(context),
       darkTheme: Mytheme.darkTheme(context),
-      // home: seen! ? const  AppView() : const WelcomePage(),
-      home: const SiginUpPage(),
+      home: seen! ? const  AppView() : const WelcomePage(),
+      // home: const ProfilePage(),
     );
   }
 }
