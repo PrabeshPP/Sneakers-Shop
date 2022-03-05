@@ -31,8 +31,8 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: Mytheme.lightTheme(context),
       darkTheme: Mytheme.darkTheme(context),
-      // home: seen! ? const  AppView() : const WelcomePage(),
-      home: const ProfilePage(),
+      home: seen! ? const  AppView() : const WelcomePage(),
+      // home: const ProfilePage(),
     );
   }
 }
