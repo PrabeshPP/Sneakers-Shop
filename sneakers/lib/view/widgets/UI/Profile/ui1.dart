@@ -18,6 +18,15 @@ class CurvedContainer extends StatelessWidget {
             Color.fromARGB(255, 3, 8, 0)],
             begin:Alignment.topCenter,end: Alignment.bottomCenter),
             borderRadius: BorderRadius.only(bottomLeft: Radius.circular(32.0)),
+            // boxShadow: [
+            //   BoxShadow(
+            //     color: Colors.black,
+            //     spreadRadius: 20,
+            //     blurRadius: 10,
+            //     offset: Offset(100, 100)
+
+            //   )
+            // ]
             ),
       ),
       clipper: MyClipper(),
