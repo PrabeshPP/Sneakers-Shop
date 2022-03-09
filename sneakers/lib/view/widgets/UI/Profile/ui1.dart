@@ -9,11 +9,16 @@ class CurvedContainer extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     return ClipPath(
       child: Container(
+        
         height: size.height * 0.3,
         width: size.width,
         decoration: const BoxDecoration(
-            color: Colors.red,
-            borderRadius: BorderRadius.only(bottomLeft: Radius.circular(32.0))),
+          
+            gradient: LinearGradient(colors:[Color.fromARGB(255, 179, 0, 250),
+            Color.fromARGB(255, 3, 8, 0)],
+            begin:Alignment.topCenter,end: Alignment.bottomCenter),
+            borderRadius: BorderRadius.only(bottomLeft: Radius.circular(32.0)),
+            ),
       ),
       clipper: MyClipper(),
     );
