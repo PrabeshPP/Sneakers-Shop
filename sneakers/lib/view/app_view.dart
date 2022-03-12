@@ -22,7 +22,7 @@ class AppView extends StatefulWidget {
 class _AppViewState extends State<AppView> {
 
   
-   int selectedIndex = 0;
+   int selectedIndex = 3;
   List<Widget> pages =  [HomePage(itemServices:ItemServices()), CartPage(), CartPage(),ProfilePage() ];
   void _onTapped(int value) {
     setState(() {

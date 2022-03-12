@@ -18,7 +18,7 @@ class ProfileUI extends StatelessWidget {
         ),
         const Positioned(child: CurvedContainer()),
         Positioned(
-            top: size.height * 0.02,
+            top: size.height * 0.06,
             left: size.width * 0.06,
             child: Text(
               "Goblin Prince",
@@ -29,7 +29,7 @@ class ProfileUI extends StatelessWidget {
                   fontSize: 25),
             )),
         Positioned(
-            top: size.height * 0.06,
+            top: size.height * 0.1,
             left: size.width * 0.06,
             child: Text(
               "demogoblin@gmail.com",
