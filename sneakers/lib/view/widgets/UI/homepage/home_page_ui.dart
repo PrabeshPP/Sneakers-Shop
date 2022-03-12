@@ -20,6 +20,11 @@ class HomePageUI extends StatelessWidget {
                 borderRadius: BorderRadius.circular(32.0),
                 color: Colors.yellow
               ),
+              child: Row(
+                children: [
+                  
+                ],
+              ),
             )
             
           ],
