@@ -50,7 +50,7 @@ class OfferCard extends StatelessWidget {
               top: size.height * 0.1,
               left: size.width * 0.06,
               child: Text(
-                "Puma ",
+                "Puma Shoes",
                 style: TextStyle(
                     color: Colors.white,
                     fontSize: size.height * 0.03,
