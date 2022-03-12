@@ -14,7 +14,7 @@ class HomePageUI extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
-            SearchBar()
+            SearchBarUI()
             
           ],
         ),
