@@ -4,6 +4,7 @@ import 'package:nepseapp/view/app_view.dart';
 import 'package:nepseapp/view/pages/Home/profile_page.dart';
 import 'package:nepseapp/view/pages/OnBoardingScreen/sigin_up.dart';
 import 'package:nepseapp/view/pages/OnBoardingScreen/welcome_page.dart';
+import 'package:nepseapp/view/widgets/UI/homepage/home_page_UI.dart';
 import 'package:nepseapp/view/widgets/utils/routes.dart';
 import 'package:nepseapp/view/widgets/utils/theme.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
       theme: Mytheme.lightTheme(context),
       darkTheme: Mytheme.darkTheme(context),
       home: seen! ? const  AppView() : const WelcomePage(),
-      // home: const ProfilePage(),
+      // home: const HomePageUI(),
     );
   }
 }
