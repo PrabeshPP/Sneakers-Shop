@@ -21,8 +21,10 @@ class HomePageUI extends StatelessWidget {
                 color: Colors.yellow
               ),
               child: Row(
-                children: [
-                  
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children:const [
+                  Icon(Icons.search),
+                  Text("Search")
                 ],
               ),
             )
