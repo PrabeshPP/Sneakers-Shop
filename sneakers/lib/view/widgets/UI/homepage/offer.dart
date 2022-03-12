@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class OfferCard extends StatelessWidget {
   const OfferCard({Key? key}) : super(key: key);
@@ -33,7 +34,7 @@ class OfferCard extends StatelessWidget {
                 style: TextStyle(
                     color: Colors.white,
                     fontSize: size.height * 0.03,
-                    fontWeight: FontWeight.bold),
+                    fontFamily: GoogleFonts.anton().fontFamily),
               )),
           Positioned(
               top: size.height * 0.046,
@@ -43,6 +44,31 @@ class OfferCard extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: size.height * 0.03,
+                ),
+              )),
+          Positioned(
+              top: size.height * 0.1,
+              left: size.width * 0.06,
+              child: Text(
+                "Puma ",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: size.height * 0.03,
+                    fontFamily: GoogleFonts.sansitaSwashed().fontFamily),
+              )),
+          Positioned(
+              right: 0,
+              child: Container(
+                height: size.height * 0.16,
+                width: size.width * 0.48,
+                decoration: BoxDecoration(
+                    color: Colors.transparent,
+                    borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(size.width * 0.06),
+                        bottomRight: Radius.circular(size.width * 0.06))),
+                child: Image.asset(
+                  "assets/images/RunningCartoon.png",
+                  fit: BoxFit.contain,
                 ),
               )),
         ],
