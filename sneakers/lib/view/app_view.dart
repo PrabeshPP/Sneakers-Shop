@@ -32,10 +32,7 @@ class _AppViewState extends State<AppView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          shape: Border(bottom: BorderSide(color: Theme.of(context).cardColor)),
-          title: const Text("Sneakers Shop"),
-        ),
+       
         body: pages.elementAt(selectedIndex),
         bottomNavigationBar:BottomNavigationBar(
           type: BottomNavigationBarType.shifting,

@@ -13,7 +13,6 @@ class HomePageUI extends StatelessWidget {
         height:size.height,
         width: size.width,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: const [
             SearchBarUI(),
             OfferCard(),

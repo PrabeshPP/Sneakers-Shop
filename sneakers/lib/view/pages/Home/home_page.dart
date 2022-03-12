@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nepseapp/model/item.dart';
 import 'package:nepseapp/repository/itemservices.dart';
+import 'package:nepseapp/view/widgets/UI/homepage/home_page_ui.dart';
 import 'package:nepseapp/view_model/home_Item/bloc/home_bloc.dart';
 
 class HomePage extends StatelessWidget {
@@ -14,30 +15,10 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final max_size = MediaQuery.of(context).size;
-    return BlocProvider(
-        create: (BuildContext context) =>
-            HomeBloc(itemServices: itemServices)..add(ItemLoading()),
-        child: BlocBuilder<HomeBloc, HomeState>(builder: (context, state) {
-          if (state is HomeInitial) {
-            return const Center(
-              child: CircularProgressIndicator(),
-            );
-          } else if (state is ItemLoadedState) {
-            return GridView.builder(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    mainAxisExtent: MediaQuery.of(context).size.height * 0.31),
-                itemCount: state.listItem.length,
-                itemBuilder: ((context, index) {
-                  var item = state.listItem[index];
-                  return CatlogItems(
-                    item: item,
-                  );
-                }));
-          } else {
-            return const Text("Something went Wrong");
-          }
-        }));
+    return Padding(
+      padding: EdgeInsets.only(top: max_size.height * 0.05),
+      child: HomePageUI(),
+    );
   }
 }
 
