@@ -4,43 +4,43 @@
         {
             "id":0,
             "name":"Nike",
-            "Icon":""
+            "icon":"assets/brandsIcons/nike.png"
 
         },
         {
             "id":1,
             "name":"Adidas",
-            "Icon":""
+            "icon":"assets/brandsIcons/adidas.png"
 
         },
         {
             "id":2,
             "name":"Converse",
-            "Icon":""
+            "icon":"assets/brandsIcons/converse.png"
 
         },
         {
             "id":3,
             "name":"Reebook",
-            "Icon":""
+            "icon":"assets/brandsIcons/reebook.png"
 
         },
         {
             "id":4,
             "name":"New Balance",
-            "Icon":""
+            "icon":"assets/brandsIcons/newbalance.png"
 
         },
         {
             "id":5,
             "name":"Vans",
-            "Icon":""
+            "icon":"assets/brandsIcons/vans.png"
 
         },
         {
             "id":5,
             "name":"Puma",
-            "Icon":""
+            "icon":"assets/brandsIcons/puma.png"
 
         }
     ]
