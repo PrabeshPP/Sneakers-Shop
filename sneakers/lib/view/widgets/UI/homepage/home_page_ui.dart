@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nepseapp/view/widgets/UI/homepage/search_bar.dart';
 
 class HomePageUI extends StatelessWidget {
   const HomePageUI({Key? key}) : super(key: key);
@@ -12,33 +13,8 @@ class HomePageUI extends StatelessWidget {
         width: size.width,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              height: size.height*0.06,
-              width: size.width*0.8,
-              decoration:  BoxDecoration(
-                borderRadius: BorderRadius.circular(32.0),
-                color: Colors.yellow
-              ),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding:EdgeInsets.only(left: size.width*0.07) ,
-                    child:const Icon(Icons.search),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: size.width*0.2),
-                    child:Text("Search",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: size.height*0.02,
-                      fontWeight: FontWeight.bold
-                    ),),
-                  )
-                ],
-              ),
-            )
+          children: const [
+            SearchBar()
             
           ],
         ),
