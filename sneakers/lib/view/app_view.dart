@@ -32,7 +32,9 @@ class _AppViewState extends State<AppView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       
+       appBar:PreferredSize(preferredSize: Size.fromHeight(0.0),child: AppBar(
+         elevation: 0.0,
+       )),
         body: pages.elementAt(selectedIndex),
         bottomNavigationBar:BottomNavigationBar(
           type: BottomNavigationBarType.shifting,

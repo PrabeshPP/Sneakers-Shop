@@ -1,0 +1,47 @@
+
+{
+    "Brands":[
+        {
+            "id":0,
+            "name":"Nike",
+            "icon":"assets/brandsIcons/nike.png"
+
+        },
+        {
+            "id":1,
+            "name":"Adidas",
+            "icon":"assets/brandsIcons/adidas.png"
+
+        },
+        {
+            "id":2,
+            "name":"Converse",
+            "icon":"assets/brandsIcons/converse.png"
+
+        },
+        {
+            "id":3,
+            "name":"Reebook",
+            "icon":"assets/brandsIcons/reebook.png"
+
+        },
+        {
+            "id":4,
+            "name":"New Balance",
+            "icon":"assets/brandsIcons/newbalance.png"
+
+        },
+        {
+            "id":5,
+            "name":"Vans",
+            "icon":"assets/brandsIcons/vans.png"
+
+        },
+        {
+            "id":5,
+            "name":"Puma",
+            "icon":"assets/brandsIcons/puma.png"
+
+        }
+    ]
+}

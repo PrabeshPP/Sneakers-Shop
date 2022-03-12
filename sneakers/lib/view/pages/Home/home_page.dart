@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final max_size = MediaQuery.of(context).size;
     return Padding(
-      padding: EdgeInsets.only(top: max_size.height * 0.05),
+      padding: EdgeInsets.only(top: max_size.height * 0.01),
       child: HomePageUI(),
     );
   }
