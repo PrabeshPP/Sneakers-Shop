@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nepseapp/view/widgets/UI/homepage/offer.dart';
 import 'package:nepseapp/view/widgets/UI/homepage/search_bar.dart';
 
 class HomePageUI extends StatelessWidget {
@@ -14,7 +15,8 @@ class HomePageUI extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
-            SearchBarUI()
+            SearchBarUI(),
+            OfferCard(),
             
           ],
         ),
