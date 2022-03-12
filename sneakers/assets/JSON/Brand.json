@@ -1,0 +1,46 @@
+{
+    "Brands":[
+        {
+            "id":0,
+            "name":"Nike",
+            "Icon":""
+
+        },
+        {
+            "id":1,
+            "name":"Adidas",
+            "Icon":""
+
+        },
+        {
+            "id":2,
+            "name":"Converse",
+            "Icon":""
+
+        },
+        {
+            "id":3,
+            "name":"Reebook",
+            "Icon":""
+
+        },
+        {
+            "id":4,
+            "name":"New Balance",
+            "Icon":""
+
+        },
+        {
+            "id":5,
+            "name":"Vans",
+            "Icon":""
+
+        },
+        {
+            "id":5,
+            "name":"Puma",
+            "Icon":""
+
+        }
+    ]
+}
