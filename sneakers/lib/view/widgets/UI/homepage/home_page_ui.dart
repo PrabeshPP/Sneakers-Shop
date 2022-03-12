@@ -22,9 +22,20 @@ class HomePageUI extends StatelessWidget {
               ),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children:const [
-                  Icon(Icons.search),
-                  Text("Search")
+                children: [
+                  Padding(
+                    padding:EdgeInsets.only(left: size.width*0.07) ,
+                    child:const Icon(Icons.search),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: size.width*0.2),
+                    child:Text("Search",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: size.height*0.02,
+                      fontWeight: FontWeight.bold
+                    ),),
+                  )
                 ],
               ),
             )
