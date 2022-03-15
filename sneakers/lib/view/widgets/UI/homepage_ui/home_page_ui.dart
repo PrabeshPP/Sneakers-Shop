@@ -19,8 +19,8 @@ class HomePageUI extends StatelessWidget {
         child: Column(
           children: const [
             SearchBarUI(),
-            // OfferCard(),
-            // BrandsIconCard(),
+            OfferCard(),
+            BrandsIconCard(),
             FlashSale()
             
           ],
