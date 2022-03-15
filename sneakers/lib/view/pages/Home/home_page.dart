@@ -7,8 +7,10 @@ import 'package:nepseapp/model/item.dart';
 import 'package:nepseapp/repository/icons_services.dart';
 import 'package:nepseapp/services/repository/itemservices.dart';
 
-import 'package:nepseapp/view/widgets/UI/homepage/home_page_ui.dart';
+
 import 'package:nepseapp/view_model/home_Item/Brands/bloc/home_bloc.dart';
+
+import '../../widgets/UI/homepage/home_page_UI.dart';
 
 class HomePage extends StatelessWidget {
   final IconsServices iconsServices;
