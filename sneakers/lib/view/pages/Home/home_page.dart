@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nepseapp/model/item.dart';
-import 'package:nepseapp/repository/itemservices.dart';
+import 'package:nepseapp/services/repository/itemservices.dart';
+
 import 'package:nepseapp/view/widgets/UI/homepage/home_page_ui.dart';
 import 'package:nepseapp/view_model/home_Item/bloc/home_bloc.dart';
 

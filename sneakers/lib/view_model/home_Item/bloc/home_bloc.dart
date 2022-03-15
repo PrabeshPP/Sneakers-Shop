@@ -1,7 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:nepseapp/model/item.dart';
-import 'package:nepseapp/repository/itemservices.dart';
+import 'package:nepseapp/services/repository/itemservices.dart';
+
 
 part 'home_event.dart';
 part 'home_state.dart';
