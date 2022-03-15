@@ -23,6 +23,13 @@ class HomePage extends StatelessWidget {
   }
 }
 
+
+
+
+
+//This UI woulde be used for the bottom of the page
+
+
 class CatlogItems extends StatelessWidget {
   final Item item;
   const CatlogItems({Key? key, required this.item}) : super(key: key);
