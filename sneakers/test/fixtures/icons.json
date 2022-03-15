@@ -1,0 +1,11 @@
+{
+    "Products":[
+        {
+          
+                "id":0,
+                "name":"Nike",
+                "icon":"assets/brandsIcons/nike.png"
+    
+        }
+    ]
+}
