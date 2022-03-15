@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:nepseapp/model/brandsIcons.dart';
 
-class ItemServices {
+class IconsServices {
   Future<List<BrandsIcon>> getItem() async {
     final jsonFile = await rootBundle.loadString("assets/JSON/Brand.json");
     final jsonDecodeFile = jsonDecode(jsonFile);
