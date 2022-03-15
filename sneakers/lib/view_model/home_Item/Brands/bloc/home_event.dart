@@ -17,4 +17,12 @@ class ItemLoaded extends HomeEvent {
   List<Object> get props => [itemServices];
 }
 
+class IconsLoaded extends HomeEvent {
+  final IconsServices iconsServices;
+  const IconsLoaded({required this.iconsServices});
+
+  @override
+  List<Object> get props => [iconsServices];
+}
+
 class LoadingError extends HomeEvent {}
