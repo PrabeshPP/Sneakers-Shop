@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:nepseapp/view/widgets/UI/homepage/brands_Icons.dart';
-import 'package:nepseapp/view/widgets/UI/homepage/offer.dart';
-import 'package:nepseapp/view/widgets/UI/homepage/search_bar.dart';
+import 'package:nepseapp/view/widgets/UI/homepage_ui/flash_sale.dart';
+import 'package:nepseapp/view/widgets/UI/homepage_ui/search_bar.dart';
+
+
+import 'package:nepseapp/view/widgets/UI/homepage_ui/brands_Icons.dart';
+import 'package:nepseapp/view/widgets/UI/homepage_ui/offer.dart';
 
 class HomePageUI extends StatelessWidget {
   const HomePageUI({Key? key}) : super(key: key);
@@ -17,7 +20,8 @@ class HomePageUI extends StatelessWidget {
           children: const [
             SearchBarUI(),
             OfferCard(),
-            BrandsIconCard()
+            BrandsIconCard(),
+            FlashSale()
             
           ],
         ),
