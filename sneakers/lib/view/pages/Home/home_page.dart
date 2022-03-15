@@ -7,7 +7,7 @@ import 'package:nepseapp/model/item.dart';
 import 'package:nepseapp/services/repository/itemservices.dart';
 
 import 'package:nepseapp/view/widgets/UI/homepage/home_page_ui.dart';
-import 'package:nepseapp/view_model/home_Item/bloc/home_bloc.dart';
+
 
 class HomePage extends StatelessWidget {
   final ItemServices itemServices;
