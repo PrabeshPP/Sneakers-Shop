@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nepseapp/view/widgets/UI/homepage_ui/flash_sale.dart';
 import 'package:nepseapp/view/widgets/UI/homepage_ui/search_bar.dart';
 
 
@@ -18,8 +19,9 @@ class HomePageUI extends StatelessWidget {
         child: Column(
           children: const [
             SearchBarUI(),
-            OfferCard(),
-            BrandsIconCard()
+            // OfferCard(),
+            // BrandsIconCard(),
+            FlashSale()
             
           ],
         ),
