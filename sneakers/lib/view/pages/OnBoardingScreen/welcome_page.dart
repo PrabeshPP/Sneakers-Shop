@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nepseapp/view/app_view.dart';
-import 'package:nepseapp/view_model/home_Item/bloc/home_bloc.dart';
+import 'package:nepseapp/view_model/home_Item/Brands/bloc/home_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class WelcomePage extends StatefulWidget {

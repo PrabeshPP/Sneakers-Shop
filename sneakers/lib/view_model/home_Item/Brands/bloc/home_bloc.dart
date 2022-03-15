@@ -1,6 +1,10 @@
+
+
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
+import 'package:nepseapp/model/brandsIcons.dart';
 import 'package:nepseapp/model/item.dart';
+import 'package:nepseapp/repository/icons_services.dart';
 import 'package:nepseapp/services/repository/itemservices.dart';
 
 
@@ -8,15 +12,15 @@ part 'home_event.dart';
 part 'home_state.dart';
 
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
-  final ItemServices _itemServices;
-  HomeBloc({required ItemServices itemServices})
-      : _itemServices = itemServices,
+  final IconsServices _iconsServices;
+  HomeBloc({required IconsServices iconsServices})
+      : _iconsServices = iconsServices,
         super(HomeInitial()) {
     on<ItemLoading>(getItems);
   }
 
   Future<void>? getItems(ItemLoading event, Emitter<HomeState> emit) async {
-    final List<Item> itemList = await _itemServices.getItem();
+    final List<BrandsIcon> itemList = await _iconsServices.getItem();
     try {
       if (itemList.isEmpty) {
         emit(HomeInitial());

@@ -4,24 +4,30 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nepseapp/model/item.dart';
+import 'package:nepseapp/repository/icons_services.dart';
 import 'package:nepseapp/services/repository/itemservices.dart';
 
 import 'package:nepseapp/view/widgets/UI/homepage/home_page_ui.dart';
-import 'package:nepseapp/view_model/home_Item/bloc/home_bloc.dart';
+import 'package:nepseapp/view_model/home_Item/Brands/bloc/home_bloc.dart';
 
 class HomePage extends StatelessWidget {
-  final ItemServices itemServices;
-  const HomePage({Key? key, required this.itemServices}) : super(key: key);
+  final IconsServices iconsServices;
+  const HomePage({Key? key, required this.iconsServices}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final max_size = MediaQuery.of(context).size;
     return Padding(
       padding: EdgeInsets.only(top: max_size.height * 0.01),
-      child: HomePageUI(),
+      child: BlocProvider(
+        create: (context) => HomeBloc(iconsServices:iconsServices )..add(ItemLoading()),
+        child: const HomePageUI(),
+      ),
     );
   }
 }
+
+//This UI woulde be used for the bottom of the page
 
 class CatlogItems extends StatelessWidget {
   final Item item;

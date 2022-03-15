@@ -10,11 +10,11 @@ abstract class HomeEvent extends Equatable {
 class ItemLoading extends HomeEvent {}
 
 class ItemLoaded extends HomeEvent {
-  final ItemServices itemServices;
-  const ItemLoaded({required this.itemServices});
+  final IconsServices iconsServices;
+  const ItemLoaded({required this.iconsServices});
 
   @override
-  List<Object> get props => [itemServices];
+  List<Object> get props => [iconsServices];
 }
 
 class LoadingError extends HomeEvent {}
