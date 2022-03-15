@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:nepseapp/model/brandsIcons.dart';
 import 'package:nepseapp/view_model/home_Item/Brands/bloc/home_bloc.dart';
 
 class BrandsIconCard extends StatelessWidget {
@@ -21,6 +20,7 @@ class BrandsIconCard extends StatelessWidget {
             height: size.height * 0.06,
             width: size.width,
             child: ListView.builder(
+              shrinkWrap: true,
               itemCount: listItem.length,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
@@ -28,6 +28,7 @@ class BrandsIconCard extends StatelessWidget {
                   return Padding(
                   padding: EdgeInsets.only(left: size.width * 0.03,right: size.width*0.03),
                   child: Container(
+                    height: size.height*0.03,
                     width: size.width*0.35,
                     decoration: BoxDecoration(
                         color: const Color.fromARGB(255, 255, 230, 0),
