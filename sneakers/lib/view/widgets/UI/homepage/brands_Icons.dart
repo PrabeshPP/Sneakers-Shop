@@ -24,17 +24,36 @@ class BrandsIconCard extends StatelessWidget {
               itemCount: listItem.length,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
-                return Padding(
-                  padding: EdgeInsets.only(left: size.width * 0.03),
+                if(index==listItem.length-1){
+                  return Padding(
+                  padding: EdgeInsets.only(left: size.width * 0.03,right: size.width*0.03),
                   child: Container(
-                    
+                    width: size.width*0.35,
                     decoration: BoxDecoration(
                         color: const Color.fromARGB(255, 255, 230, 0),
                         borderRadius: BorderRadius.circular(size.width * 0.1)),
                     child: Image.asset(
                       listItem[index].icon,
-                      width: size.width * 0.35,
-                      fit: BoxFit.none,
+                     
+                      
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                );
+
+                }
+                return Padding(
+                  padding: EdgeInsets.only(left: size.width * 0.03),
+                  child: Container(
+                    width: size.width*0.35,
+                    decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 255, 230, 0),
+                        borderRadius: BorderRadius.circular(size.width * 0.1)),
+                    child: Image.asset(
+                      listItem[index].icon,
+                     
+                      
+                      fit: BoxFit.contain,
                     ),
                   ),
                 );
