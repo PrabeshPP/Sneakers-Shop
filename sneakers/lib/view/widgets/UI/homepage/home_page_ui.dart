@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nepseapp/view/widgets/UI/homepage/brands_Icons.dart';
 import 'package:nepseapp/view/widgets/UI/homepage/offer.dart';
 import 'package:nepseapp/view/widgets/UI/homepage/search_bar.dart';
 
@@ -16,6 +17,7 @@ class HomePageUI extends StatelessWidget {
           children: const [
             SearchBarUI(),
             OfferCard(),
+            BrandsIconCard()
             
           ],
         ),
