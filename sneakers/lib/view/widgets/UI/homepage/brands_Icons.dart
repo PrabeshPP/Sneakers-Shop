@@ -27,13 +27,14 @@ class BrandsIconCard extends StatelessWidget {
                 return Padding(
                   padding: EdgeInsets.only(left: size.width * 0.03),
                   child: Container(
-                    width: size.width * 0.35,
+                    
                     decoration: BoxDecoration(
-                        color: Colors.red,
+                        color: const Color.fromARGB(255, 255, 230, 0),
                         borderRadius: BorderRadius.circular(size.width * 0.1)),
                     child: Image.asset(
                       listItem[index].icon,
-                      fit: BoxFit.contain,
+                      width: size.width * 0.35,
+                      fit: BoxFit.none,
                     ),
                   ),
                 );
