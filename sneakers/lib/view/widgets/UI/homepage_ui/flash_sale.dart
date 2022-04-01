@@ -15,6 +15,7 @@ class FlashSale extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+          //Flash Sale Text
           Text(
             "Flash Sale",
             style: TextStyle(
