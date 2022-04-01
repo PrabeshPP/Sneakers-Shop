@@ -20,10 +20,26 @@ class ProfileBody extends StatelessWidget {
         ),
         Row(
           children: const [
-            Col(icons: Icons.payment, text: "To Pay",color: null,),
-            Col(icons: Icons.local_activity, text: "To Ship",color: null,),
-            Col(icons: Icons.local_shipping, text: "To Receive",color: null,),
-            Col(icons: Icons.rate_review, text: "To Review",color: null,)
+            Col(
+              icons: Icons.payment,
+              text: "To Pay",
+              color: null,
+            ),
+            Col(
+              icons: Icons.local_activity,
+              text: "To Ship",
+              color: null,
+            ),
+            Col(
+              icons: Icons.local_shipping,
+              text: "To Receive",
+              color: null,
+            ),
+            Col(
+              icons: Icons.rate_review,
+              text: "To Review",
+              color: null,
+            )
           ],
         ),
         Row(
@@ -50,10 +66,26 @@ class ProfileBody extends StatelessWidget {
         ),
         Row(
           children: const [
-            Col(icons: CupertinoIcons.mail, text: "Messages",color: null,),
-            Col(icons: Icons.message, text: "My Review",color: null,),
-            Col(icons: Icons.payment_sharp, text: "Payment\n Options",color: null,),
-            Col(icons: CupertinoIcons.question, text: "Help",color: Colors.red,),
+            Col(
+              icons: CupertinoIcons.mail,
+              text: "Messages",
+              color: null,
+            ),
+            Col(
+              icons: Icons.message,
+              text: "My Review",
+              color: null,
+            ),
+            Col(
+              icons: Icons.payment_sharp,
+              text: "Payment\n Options",
+              color: null,
+            ),
+            Col(
+              icons: CupertinoIcons.question,
+              text: "Help",
+              color: Colors.red,
+            ),
           ],
         )
       ],
@@ -66,65 +98,62 @@ class Col extends StatelessWidget {
   final IconData icons;
   final String text;
   final Color? color;
-  const Col({Key? key, required this.icons, required this.text,required this.color})
+  const Col(
+      {Key? key, required this.icons, required this.text, required this.color})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    if(color!=null){
+    if (color != null) {
       return Padding(
-      padding:
-          EdgeInsets.only(left: size.width * 0.02, top: size.height * 0.01),
-      child: InkWell(
-        onTap: () {},
-        child: SizedBox(
-          width: size.width * 0.2,
-          child: Column(
-            children: [
-              Icon(
-                icons,
-                size: 35,
-                color: color,
-              ),
-              Text(
-                text,
-                style: TextStyle(color: Theme.of(context).primaryColor),
-              )
-            ],
+        padding:
+            EdgeInsets.only(left: size.width * 0.02, top: size.height * 0.01),
+        child: InkWell(
+          onTap: () {},
+          child: SizedBox(
+            width: size.width * 0.2,
+            child: Column(
+              children: [
+                Icon(
+                  icons,
+                  size: 35,
+                  color: color,
+                ),
+                Text(
+                  text,
+                  style: TextStyle(color: Theme.of(context).primaryColor),
+                )
+              ],
+            ),
           ),
         ),
-      ),
-    );
-
-    }else{
+      );
+    } else {
       return Padding(
-      padding:
-          EdgeInsets.only(left: size.width * 0.02, top: size.height * 0.01),
-      child: InkWell(
-        onTap: () {},
-        child: SizedBox(
-          width: size.width * 0.2,
-          child: Column(
-            children: [
-              Icon(
-                icons,
-                size: 35,
-                
-                color: Theme.of(context).primaryColor,
-              ),
-              Text(
-                text,
-                style: TextStyle(color: Theme.of(context).primaryColor),
-              )
-            ],
+        padding:
+            EdgeInsets.only(left: size.width * 0.02, top: size.height * 0.01),
+        child: InkWell(
+          onTap: () {},
+          child: SizedBox(
+            width: size.width * 0.2,
+            child: Column(
+              children: [
+                Icon(
+                  icons,
+                  size: 35,
+                  color: Theme.of(context).primaryColor,
+                ),
+                Text(
+                  text,
+                  style: TextStyle(color: Theme.of(context).primaryColor),
+                )
+              ],
+            ),
           ),
         ),
-      ),
-    );
-
+      );
     }
-    
   }
 }
 

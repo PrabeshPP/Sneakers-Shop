@@ -15,6 +15,7 @@ class FlashSale extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+          //Flash Sale Text
           Text(
             "Flash Sale",
             style: TextStyle(
@@ -29,6 +30,7 @@ class FlashSale extends StatelessWidget {
   }
 }
 
+//
 class TimerSale extends StatelessWidget {
   const TimerSale({Key? key}) : super(key: key);
 
@@ -46,7 +48,9 @@ class TimerSale extends StatelessWidget {
         ),
         const TimeContainer(text: "01"),
         const TimeContainer(text: "20"),
-        const TimeContainer(text: "50",)
+        const TimeContainer(
+          text: "50",
+        )
       ],
     );
   }
@@ -54,7 +58,7 @@ class TimerSale extends StatelessWidget {
 
 class TimeContainer extends StatelessWidget {
   final String text;
-  const TimeContainer({Key? key,required this.text}) : super(key: key);
+  const TimeContainer({Key? key, required this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -65,13 +69,14 @@ class TimeContainer extends StatelessWidget {
         height: size.height * 0.04,
         width: size.width * 0.08,
         color: const Color.fromARGB(255, 135, 138, 1),
-        
-        child: Center(child: Text(text,
-        style: TextStyle(
-           fontFamily: GoogleFonts.robotoMono().fontFamily,
-           color: Colors.white,
-           fontWeight: FontWeight.bold
-        ),)),
+        child: Center(
+            child: Text(
+          text,
+          style: TextStyle(
+              fontFamily: GoogleFonts.robotoMono().fontFamily,
+              color: Colors.white,
+              fontWeight: FontWeight.bold),
+        )),
       ),
     );
   }

@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CartPage extends StatelessWidget {
-  const CartPage({ Key? key }) : super(key: key);
+  const CartPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,10 +11,10 @@ class CartPage extends StatelessWidget {
       height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,
       child: const Center(
-        child: Icon(CupertinoIcons.cart,
-        size: 50,)
-      ),
-      
+          child: Icon(
+        CupertinoIcons.cart,
+        size: 50,
+      )),
     );
   }
 }

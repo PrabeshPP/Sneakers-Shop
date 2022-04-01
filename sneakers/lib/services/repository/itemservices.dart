@@ -8,9 +8,9 @@ class ItemServices {
     final jsonFile = await rootBundle.loadString("assets/JSON/file.json");
     final jsonDecodeFile = jsonDecode(jsonFile);
     var productsData = jsonDecodeFile["products"];
-  List<Item> itemList=List.from(productsData).map((e) =>Item.fromJson(e) ).toList();
-    
+    List<Item> itemList =
+        List.from(productsData).map((e) => Item.fromJson(e)).toList();
 
-    return itemList ;
+    return itemList;
   }
 }

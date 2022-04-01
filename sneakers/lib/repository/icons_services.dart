@@ -9,9 +9,9 @@ class IconsServices {
     final jsonDecodeFile = jsonDecode(jsonFile);
     var productsData = jsonDecodeFile["Brands"];
     //mapping the data
-  List<BrandsIcon> brandsIconList=List.from(productsData).map((e) =>BrandsIcon.fromJson(e) ).toList();
-    
+    List<BrandsIcon> brandsIconList =
+        List.from(productsData).map((e) => BrandsIcon.fromJson(e)).toList();
 
-    return brandsIconList ;
+    return brandsIconList;
   }
 }

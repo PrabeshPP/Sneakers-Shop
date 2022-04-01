@@ -8,13 +8,7 @@ import 'package:nepseapp/view/pages/Home/home_page.dart';
 import 'package:nepseapp/view/pages/Home/login_page.dart';
 import 'package:nepseapp/view/pages/Home/profile_page.dart';
 
-
-
-
-
-
 class AppView extends StatefulWidget {
-  
   const AppView({Key? key}) : super(key: key);
 
   @override
@@ -22,40 +16,46 @@ class AppView extends StatefulWidget {
 }
 
 class _AppViewState extends State<AppView> {
-
-  
-   int selectedIndex = 0;
-  List<Widget> pages =  [HomePage(iconsServices:IconsServices()), CartPage(), CartPage(),ProfilePage() ];
+  int selectedIndex = 0;
+  List<Widget> pages = [
+    HomePage(iconsServices: IconsServices()),
+    CartPage(),
+    CartPage(),
+    ProfilePage()
+  ];
   void _onTapped(int value) {
     setState(() {
       selectedIndex = value;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       appBar:PreferredSize(preferredSize: Size.fromHeight(0.0),child: AppBar(
-         elevation: 0.0,
-       )),
+        appBar: PreferredSize(
+            preferredSize: Size.fromHeight(0.0),
+            child: AppBar(
+              elevation: 0.0,
+            )),
         body: pages.elementAt(selectedIndex),
-        bottomNavigationBar:BottomNavigationBar(
+        bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.shifting,
-      items: const [
-        BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home" ),
-        BottomNavigationBarItem(
-            icon: Icon(Icons.notifications), label: "Notifications"),
-        BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.cart_fill), label: "Cart"),
-        BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.profile_circled), label: "Profile"),
-      ],
-      selectedFontSize: 14,
-      selectedItemColor: Colors.teal,
-      currentIndex: selectedIndex,
-      onTap: _onTapped,
-      showSelectedLabels: true,
-      showUnselectedLabels: true,
-      unselectedFontSize: 12,
-    ) );
+          items: const [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.notifications), label: "Notifications"),
+            BottomNavigationBarItem(
+                icon: Icon(CupertinoIcons.cart_fill), label: "Cart"),
+            BottomNavigationBarItem(
+                icon: Icon(CupertinoIcons.profile_circled), label: "Profile"),
+          ],
+          selectedFontSize: 14,
+          selectedItemColor: Colors.teal,
+          currentIndex: selectedIndex,
+          onTap: _onTapped,
+          showSelectedLabels: true,
+          showUnselectedLabels: true,
+          unselectedFontSize: 12,
+        ));
   }
 }
