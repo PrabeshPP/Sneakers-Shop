@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:nepseapp/repository/icons_services.dart';
-import 'package:nepseapp/services/repository/itemservices.dart';
+import 'package:nepseapp/repository/itemservices.dart';
 
 import 'package:nepseapp/view/pages/Home/cart_page.dart';
 import 'package:nepseapp/view/pages/Home/home_page.dart';
@@ -18,7 +18,10 @@ class AppView extends StatefulWidget {
 class _AppViewState extends State<AppView> {
   int selectedIndex = 0;
   List<Widget> pages = [
-    HomePage(iconsServices: IconsServices()),
+    HomePage(
+      iconsServices: IconsServices(),
+      itemServices: ItemServices(),
+    ),
     CartPage(),
     CartPage(),
     ProfilePage()

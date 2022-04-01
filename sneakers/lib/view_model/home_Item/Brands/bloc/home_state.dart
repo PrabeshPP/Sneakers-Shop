@@ -10,11 +10,12 @@ abstract class HomeState extends Equatable {
 class HomeInitial extends HomeState {}
 
 class ItemLoadedState extends HomeState {
-  final List<BrandsIcon> listItem;
-  const ItemLoadedState({required this.listItem});
+  final List<BrandsIcon> listIcons;
+  final List<Item> listItems;
+  const ItemLoadedState({required this.listItems, required this.listIcons});
 
   @override
-  List<Object> get props => [listItem];
+  List<Object> get props => [listIcons, listItems];
 }
 
 class ErrorLoading extends HomeState {}

@@ -7,4 +7,20 @@ abstract class FlashSaleState extends Equatable {
   List<Object> get props => [];
 }
 
-class FlashSaleInitial extends FlashSaleState {}
+class FlashSaleInitial extends FlashSaleState {
+  final int duration;
+
+  const FlashSaleInitial({required this.duration});
+  @override
+  List<Object> get props => [duration];
+}
+
+class FlashSaleInProgress extends FlashSaleState {
+  final int duration;
+
+  const FlashSaleInProgress({required this.duration});
+  @override
+  List<Object> get props => [duration];
+}
+
+class FlashSaleCompleted extends FlashSaleState {}

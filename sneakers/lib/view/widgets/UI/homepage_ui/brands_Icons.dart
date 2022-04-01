@@ -15,7 +15,7 @@ class BrandsIconCard extends StatelessWidget {
         if (state is HomeInitial) {
           return const CircularProgressIndicator();
         } else if (state is ItemLoadedState) {
-          var listItem = state.listItem;
+          var listItem = state.listIcons;
           return SizedBox(
             height: size.height * 0.06,
             width: size.width,
