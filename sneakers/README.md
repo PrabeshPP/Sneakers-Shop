@@ -26,7 +26,7 @@ samples, guidance on mobile development, and a full API reference.
 </div>
 
 <div align="left">
- <img src="https://github.com/PrabeshPP/Sneakers-Shop/blob/master1.1/sneakers/screenshot/h_sc1.jpg" width="250" height="400">  <img src="https://github.com/PrabeshPP/Sneakers-Shop/blob/master1.1/sneakers/screenshot/h_sc2.jpg" width="250" height="400">
+ <img src="https://github.com/PrabeshPP/Sneakers-Shop/blob/master1.1/sneakers/screenshot/sc.jpg" width="250" height="400"> 
 </div>
 
 
