@@ -14,3 +14,16 @@ class FlashSaleInitial extends FlashSaleState {
   @override
   List<Object> get props => [duration];
 }
+
+class FlashSaleInProgress extends FlashSaleState {
+  final int duration;
+
+ const FlashSaleInProgress({required this.duration});
+ @override
+List<Object> get props => [duration];
+
+}
+
+class FlashSaleCompleted extends FlashSaleState {
+  
+}
