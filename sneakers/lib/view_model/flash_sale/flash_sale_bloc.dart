@@ -11,7 +11,7 @@ class FlashSaleBloc extends Bloc<FlashSaleEvent, FlashSaleState> {
   final int duration;
   final Ticker ticker;
   StreamSubscription<int>? _streamSubscription;
-  FlashSaleBloc(this.duration, this.ticker)
+  FlashSaleBloc({required this.duration,required this.ticker})
       : super(FlashSaleInitial(duration: duration)) {
     on<FlashSaleStarted>(_onStarted);
     on<FlashSaleTicked>(_onTicked);
@@ -20,13 +20,13 @@ class FlashSaleBloc extends Bloc<FlashSaleEvent, FlashSaleState> {
   //This function is to cancel the already opened _streamSubscription
   @override
   Future<void> close() {
-    _streamSubscription!.cancel();
+    _streamSubscription?.cancel();
     return super.close();
   }
 
   void _onStarted(FlashSaleStarted event, Emitter<FlashSaleState> emit) {
     emit(FlashSaleInProgress(duration: event.duration));
-    _streamSubscription!.cancel();
+    _streamSubscription?.cancel();
     _streamSubscription = ticker
         .tick(ticks: event.duration)
         .listen((duration) => add(FlashSaleTicked(duration: duration)));

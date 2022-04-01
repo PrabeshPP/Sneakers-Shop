@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nepseapp/view_model/flash_sale/flash_sale_bloc.dart';
+import 'package:nepseapp/view_model/ticker/ticker.dart';
 
 class FlashSale extends StatelessWidget {
   const FlashSale({Key? key}) : super(key: key);
@@ -37,21 +40,36 @@ class TimerSale extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    return Row(
-      children: [
-        Text(
-          "Closing in:",
-          style: TextStyle(
-              color: Colors.black,
-              fontFamily: GoogleFonts.roboto().fontFamily,
-              fontSize: size.height * 0.02),
-        ),
-        const TimeContainer(text: "01"),
-        const TimeContainer(text: "20"),
-        const TimeContainer(
-          text: "50",
-        )
-      ],
+    return BlocProvider(
+      create: (context) => FlashSaleBloc(duration: 0, ticker: Ticker())..add(const FlashSaleStarted(duration: 0)),
+      child: BlocBuilder<FlashSaleBloc, FlashSaleState>(
+        builder: (context, state) {
+          if (state is FlashSaleInProgress) {
+            String hour =
+                (state.duration / 3600).floor().toString().padLeft(2, "0");
+            String minute =
+                ((state.duration / 60) % 60).floor().toString().padLeft(2, "0");
+            String seccond =
+                (state.duration % 60 ).floor().toString().padLeft(2, "0");
+            return Row(
+              children: [
+                Text(
+                  "Closing in:",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontFamily: GoogleFonts.roboto().fontFamily,
+                      fontSize: size.height * 0.02),
+                ),
+                TimeContainer(text: hour),
+                TimeContainer(text: minute),
+                TimeContainer(text: seccond),
+              ],
+            );
+          } else {
+            return Text("Nothing");
+          }
+        },
+      ),
     );
   }
 }
