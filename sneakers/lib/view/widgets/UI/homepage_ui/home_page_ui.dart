@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nepseapp/view/widgets/UI/homepage_ui/flash_sale.dart';
 import 'package:nepseapp/view/widgets/UI/homepage_ui/recent_view.dart';
+import 'package:nepseapp/view/widgets/UI/homepage_ui/recent_view_ui.dart';
 import 'package:nepseapp/view/widgets/UI/homepage_ui/search_bar.dart';
 
 import 'package:nepseapp/view/widgets/UI/homepage_ui/brands_Icons.dart';
@@ -12,8 +13,8 @@ class HomePageUI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    return Material(
-      child: SingleChildScrollView(
+    return SingleChildScrollView(
+      child: Material(
         child: SizedBox(
           height: size.height,
           width: size.width,
@@ -23,7 +24,7 @@ class HomePageUI extends StatelessWidget {
               OfferCard(),
               BrandsIconCard(),
               FlashSale(),
-              RecentlyViewed()
+              RecentViewUI(),
             ],
           ),
         ),

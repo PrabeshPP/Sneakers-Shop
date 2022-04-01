@@ -17,11 +17,12 @@ class RecentlyViewed extends StatelessWidget {
         return SizedBox(
           height: MediaQuery.of(context).size.height * 0.25,
           child: ListView.builder(
-              itemCount: 2,
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) {
-                return CatlogItems(item: state.listItems[index]);
-              }),
+            itemCount: 2,
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (context, index) {
+              return CatlogItems(item: state.listItems[index]);
+            },
+          ),
         );
       } else {
         return const Center(

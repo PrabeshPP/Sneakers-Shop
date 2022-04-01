@@ -56,8 +56,8 @@ class TimerSale extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return BlocProvider(
-      create: (context) => FlashSaleBloc(duration: 0, ticker: Ticker())
-        ..add(const FlashSaleStarted(duration: 0)),
+      create: (context) => FlashSaleBloc(duration: 7200, ticker: Ticker())
+        ..add(const FlashSaleStarted(duration: 7200)),
       child: BlocBuilder<FlashSaleBloc, FlashSaleState>(
         builder: (context, state) {
           if (state is FlashSaleInProgress) {

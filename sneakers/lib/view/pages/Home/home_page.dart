@@ -12,7 +12,9 @@ import 'package:nepseapp/view_model/home_Item/Brands/bloc/home_bloc.dart';
 class HomePage extends StatelessWidget {
   final IconsServices iconsServices;
   final ItemServices itemServices;
-  const HomePage({Key? key, required this.iconsServices,required this.itemServices}) : super(key: key);
+  const HomePage(
+      {Key? key, required this.iconsServices, required this.itemServices})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,11 +23,10 @@ class HomePage extends StatelessWidget {
       padding: EdgeInsets.only(top: max_size.height * 0.01),
       child: BlocProvider(
         create: (context) =>
-            HomeBloc(iconsServices: iconsServices, itemServices:itemServices )..add(ItemLoading()),
+            HomeBloc(iconsServices: iconsServices, itemServices: itemServices)
+              ..add(ItemLoading()),
         child: const HomePageUI(),
       ),
     );
   }
 }
-
-
