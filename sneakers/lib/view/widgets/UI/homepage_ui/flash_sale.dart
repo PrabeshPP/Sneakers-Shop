@@ -29,7 +29,7 @@ class FlashSale extends StatelessWidget {
     );
   }
 }
-
+//
 class TimerSale extends StatelessWidget {
   const TimerSale({Key? key}) : super(key: key);
 
