@@ -1,11 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nepseapp/view/widgets/UI/homepage_ui/flash_sale_card.dart';
 import 'package:nepseapp/view_model/flash_sale/flash_sale_bloc.dart';
 import 'package:nepseapp/view_model/ticker/ticker.dart';
 
 class FlashSale extends StatelessWidget {
   const FlashSale({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: const [
+        FlashTimeSale(),
+        FlashSaleCard(),
+      ],
+    );
+  }
+}
+
+class FlashTimeSale extends StatelessWidget {
+  const FlashTimeSale({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +41,7 @@ class FlashSale extends StatelessWidget {
                 fontFamily: GoogleFonts.roboto().fontFamily,
                 fontSize: size.height * 0.028),
           ),
-          const TimerSale()
+          const TimerSale(),
         ],
       ),
     );
@@ -41,7 +56,8 @@ class TimerSale extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return BlocProvider(
-      create: (context) => FlashSaleBloc(duration: 0, ticker: Ticker())..add(const FlashSaleStarted(duration: 0)),
+      create: (context) => FlashSaleBloc(duration: 0, ticker: Ticker())
+        ..add(const FlashSaleStarted(duration: 0)),
       child: BlocBuilder<FlashSaleBloc, FlashSaleState>(
         builder: (context, state) {
           if (state is FlashSaleInProgress) {
@@ -50,7 +66,7 @@ class TimerSale extends StatelessWidget {
             String minute =
                 ((state.duration / 60) % 60).floor().toString().padLeft(2, "0");
             String seccond =
-                (state.duration % 60 ).floor().toString().padLeft(2, "0");
+                (state.duration % 60).floor().toString().padLeft(2, "0");
             return Row(
               children: [
                 Text(

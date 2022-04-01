@@ -11,7 +11,7 @@ class FlashSaleBloc extends Bloc<FlashSaleEvent, FlashSaleState> {
   final int duration;
   final Ticker ticker;
   StreamSubscription<int>? _streamSubscription;
-  FlashSaleBloc({required this.duration,required this.ticker})
+  FlashSaleBloc({required this.duration, required this.ticker})
       : super(FlashSaleInitial(duration: duration)) {
     on<FlashSaleStarted>(_onStarted);
     on<FlashSaleTicked>(_onTicked);

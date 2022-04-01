@@ -20,7 +20,7 @@ class HomePageUI extends StatelessWidget {
             SearchBarUI(),
             OfferCard(),
             BrandsIconCard(),
-            FlashSale()
+            FlashSale(),
           ],
         ),
       ),
