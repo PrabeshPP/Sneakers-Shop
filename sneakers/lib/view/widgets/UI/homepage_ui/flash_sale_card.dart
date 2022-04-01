@@ -31,7 +31,7 @@ class FlashSaleCard extends StatelessWidget {
                               fit: BoxFit.contain,
                             ),
                           ),
-                         Positioned(
+                          Positioned(
                             right: 0,
                             child: Container(
                               height: size.height * 0.04,

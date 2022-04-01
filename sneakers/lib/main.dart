@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:nepseapp/repository/itemservices.dart';
 
-import 'package:nepseapp/services/repository/itemservices.dart';
 import 'package:nepseapp/view/app_view.dart';
 import 'package:nepseapp/view/pages/Home/profile_page.dart';
 import 'package:nepseapp/view/pages/OnBoardingScreen/sigin_up.dart';
