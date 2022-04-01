@@ -42,7 +42,7 @@ class SiginUp extends StatelessWidget {
                 ),
               )),
         ),
-    
+
         // For the Phone or Email field
         Padding(
           padding: EdgeInsets.only(top: size * 0.02),
@@ -101,21 +101,21 @@ class SiginUp extends StatelessWidget {
                           const BorderSide(color: Colors.red, width: 2.0)),
                 ),
               )),
-    
-              
         ),
-        Padding(padding: EdgeInsets.only(top: size * 0.02,
-        left: MediaQuery.of(context).size.width*0.02),
-        child:Row(
-          children: const[
-            CheckBoxContainer(),
-            Text("Show Password",
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold
-            ),)
-          ],
-        ),)
+        Padding(
+          padding: EdgeInsets.only(
+              top: size * 0.02, left: MediaQuery.of(context).size.width * 0.02),
+          child: Row(
+            children: const [
+              CheckBoxContainer(),
+              Text(
+                "Show Password",
+                style:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              )
+            ],
+          ),
+        )
       ],
     );
   }
@@ -127,12 +127,10 @@ class CheckBoxContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Checkbox(
-     fillColor: MaterialStateProperty.all(const Color.fromARGB(255, 6, 255, 230)),
+      fillColor:
+          MaterialStateProperty.all(const Color.fromARGB(255, 6, 255, 230)),
       value: false,
-      onChanged: (bool? value) {
-     
-      },
-      
+      onChanged: (bool? value) {},
     );
   }
 }

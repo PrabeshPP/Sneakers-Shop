@@ -8,8 +8,6 @@ import 'package:nepseapp/repository/icons_services.dart';
 import 'package:nepseapp/view/widgets/UI/homepage_ui/home_page_ui.dart';
 import 'package:nepseapp/view_model/home_Item/Brands/bloc/home_bloc.dart';
 
-
-
 class HomePage extends StatelessWidget {
   final IconsServices iconsServices;
   const HomePage({Key? key, required this.iconsServices}) : super(key: key);
@@ -20,7 +18,8 @@ class HomePage extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(top: max_size.height * 0.01),
       child: BlocProvider(
-        create: (context) => HomeBloc(iconsServices:iconsServices )..add(ItemLoading()),
+        create: (context) =>
+            HomeBloc(iconsServices: iconsServices)..add(ItemLoading()),
         child: const HomePageUI(),
       ),
     );

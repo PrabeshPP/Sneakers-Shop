@@ -6,5 +6,3 @@ abstract class FlashSaleEvent extends Equatable {
   @override
   List<Object> get props => [];
 }
-
-

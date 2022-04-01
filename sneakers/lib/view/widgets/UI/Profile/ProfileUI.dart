@@ -57,23 +57,22 @@ class ProfileUI extends StatelessWidget {
             child: Container(
               height: size.height * 0.2,
               width: size.width * 0.3,
-              decoration:  BoxDecoration(
+              decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                image: const DecorationImage(image: AssetImage("assets/images/goblin.jpg",
+                image: const DecorationImage(
+                  image: AssetImage(
+                    "assets/images/goblin.jpg",
                   ),
                   fit: BoxFit.fill,
                 ),
                 border: Border.all(
-                  color:const Color.fromARGB(255, 138, 122, 121),
-                  width: 3
-                ),
-                ),
-                
+                    color: const Color.fromARGB(255, 138, 122, 121), width: 3),
+              ),
             )),
-
-            Positioned(top:size.height*0.3 ,
-            left: size.width*0.04,
-            child:ProfileBody())
+        Positioned(
+            top: size.height * 0.3,
+            left: size.width * 0.04,
+            child: ProfileBody())
       ],
     );
   }

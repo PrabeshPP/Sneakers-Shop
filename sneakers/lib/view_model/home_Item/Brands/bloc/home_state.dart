@@ -17,4 +17,4 @@ class ItemLoadedState extends HomeState {
   List<Object> get props => [listItem];
 }
 
-class ErrorLoading extends HomeState{}
+class ErrorLoading extends HomeState {}
