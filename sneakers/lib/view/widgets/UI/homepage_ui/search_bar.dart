@@ -15,9 +15,8 @@ class SearchBarUI extends StatelessWidget {
           boxShadow:const [
             BoxShadow(
               color: Color.fromARGB(255, 80, 78, 78),
-              offset: Offset(4.0, 6.0),
-              blurRadius: 10.0,
-              spreadRadius: 2.0
+              offset: Offset(3.0, 3.0),
+              blurRadius: 5.0,
             )
 
           ]),
