@@ -32,18 +32,44 @@ class FlashTimeSale extends StatelessWidget {
           right: size.width * 0.042),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
+        children: const[
           //Flash Sale Text
-          Text(
-            "Flash Sale",
-            style: TextStyle(
-                color: Colors.black,
-                fontFamily: GoogleFonts.roboto().fontFamily,
-                fontSize: size.height * 0.028),
-          ),
-          const TimerSale(),
+          FlashSaleText(),
+           TimerSale(),
         ],
       ),
+    );
+  }
+}
+
+class FlashSaleText extends StatelessWidget {
+  const FlashSaleText({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      height: size.height * 0.05,
+      width: size.width * 0.4,
+      decoration: BoxDecoration(
+          color: const Color.fromARGB(255, 255, 60, 0),
+          borderRadius: BorderRadius.circular(16.0)),
+      child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Flash Sale",
+              style: TextStyle(
+                  fontSize: size.height * 0.02,
+                  color: Colors.white,
+                  fontFamily: GoogleFonts.roboto().fontFamily),
+            ),
+            const Icon(
+              Icons.flash_on_outlined,
+              color: Colors.white,
+            )
+          ]),
     );
   }
 }
@@ -82,7 +108,7 @@ class TimerSale extends StatelessWidget {
               ],
             );
           } else {
-            return Text("Nothing");
+            return const Text("Nothing");
           }
         },
       ),
