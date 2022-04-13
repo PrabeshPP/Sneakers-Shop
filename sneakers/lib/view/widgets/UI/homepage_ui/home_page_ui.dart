@@ -3,7 +3,6 @@ import 'package:nepseapp/view/widgets/UI/homepage_ui/flash_sale.dart';
 import 'package:nepseapp/view/widgets/UI/homepage_ui/recent_view.dart';
 import 'package:nepseapp/view/widgets/UI/homepage_ui/recent_view_ui.dart';
 
-
 import 'package:nepseapp/view/widgets/UI/homepage_ui/brands_Icons.dart';
 import 'package:nepseapp/view/widgets/UI/homepage_ui/offer.dart';
 
@@ -12,23 +11,13 @@ class HomePageUI extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
-    return SingleChildScrollView(
-      child: Material(
-        child: SizedBox(
-          height: size.height,
-          width: size.width,
-          child: Column(
-            children: const [
-              
-              OfferCard(),
-              BrandsIconCard(),
-              FlashSale(),
-              RecentViewUI(),
-            ],
-          ),
-        ),
-      ),
+    return Column(
+      children: const [
+        OfferCard(),
+        BrandsIconCard(),
+        FlashSale(),
+        RecentViewUI(),
+      ],
     );
   }
 }

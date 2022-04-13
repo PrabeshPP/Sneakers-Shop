@@ -10,9 +10,9 @@ class SearchBarUI extends StatelessWidget {
       height: size.height * 0.05,
       width: size.width * 0.7,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(32.0),
-          color: Colors.yellow,
-         ),
+        borderRadius: BorderRadius.circular(32.0),
+        color: Colors.yellow,
+      ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [

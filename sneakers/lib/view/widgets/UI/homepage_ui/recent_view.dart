@@ -14,14 +14,19 @@ class RecentlyViewed extends StatelessWidget {
       if (state is HomeInitial) {
         return const CircularProgressIndicator();
       } else if (state is ItemLoadedState) {
-        return SizedBox(
-          height: MediaQuery.of(context).size.height * 0.25,
-          child: ListView.builder(
-            itemCount: 2,
-            scrollDirection: Axis.horizontal,
-            itemBuilder: (context, index) {
-              return CatlogItems(item: state.listItems[index]);
-            },
+        List<Item> list = state.listItems;
+        return Expanded(
+          child: GridView.count(
+            crossAxisCount: 2,
+            crossAxisSpacing: 10,
+            mainAxisSpacing: 10,
+            children: 
+              list.map((item) =>Card(
+                child: Container(
+                  child: Text(item.name),
+                ),
+              )).toList()
+            
           ),
         );
       } else {

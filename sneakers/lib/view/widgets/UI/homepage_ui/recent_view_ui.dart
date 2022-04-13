@@ -7,21 +7,9 @@ class RecentViewUI extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var size=MediaQuery.of(context).size;
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children:  [
-        Padding(
-          padding: EdgeInsets.only(left:size.width*0.032 ,top: size.height*0.01),
-          child: Text("Recently Viewed",
-          style: TextStyle(
-            fontSize: size.height * 0.028,
-            color: Colors.black,
-            fontFamily: GoogleFonts.roboto().fontFamily
-          ),),
-        ),
-       const  RecentlyViewed(),
-      ],
+    var size = MediaQuery.of(context).size;
+    return Container(
+      child: ,
     );
   }
 }

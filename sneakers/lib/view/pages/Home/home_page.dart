@@ -19,30 +19,35 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final max_size = MediaQuery.of(context).size;
     return BlocProvider(
-      create: (context) =>
-          HomeBloc(iconsServices: iconsServices, itemServices: itemServices)
-            ..add(ItemLoading()),
-      child: Scaffold(
-        appBar: AppBar(
-          elevation: 0.0,
-          leading:Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-             const Icon(CupertinoIcons.qrcode_viewfinder,
-              color: Colors.black,),
-              Text("Scan",
-              style:Theme.of(context).textTheme.caption!.copyWith(
-                color: Colors.black
-              )),
-            ],
+        create: (context) =>
+            HomeBloc(iconsServices: iconsServices, itemServices: itemServices)
+              ..add(ItemLoading()),
+        child: Scaffold(
+          appBar: AppBar(
+            elevation: 0.0,
+            leading:IconButton(onPressed: (){
+
+            }, icon:  Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Icon(
+                  CupertinoIcons.qrcode_viewfinder,
+                  color: Colors.black,
+                ),
+                Text("Scan",
+                    style: Theme.of(context)
+                        .textTheme
+                        .caption!
+                        .copyWith(color: Colors.black)),
+              ],
+            ),),
+            title: const SearchBarUI(),
           ),
-          title: const SearchBarUI(),
-        ),
-        body: const HomePageUI(),
-      )
-    );
+          body: const SingleChildScrollView(
+            child: HomePageUI(),
+          ),
+        ));
   }
 }
