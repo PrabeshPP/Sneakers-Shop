@@ -13,14 +13,30 @@ class RecentViewUI extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.only(
-              left: size.width * 0.032, top: size.height * 0.01),
-          child: Text(
-            "Recently Viewed",
-            style: TextStyle(
-                fontSize: size.height * 0.028,
-                color: Colors.black,
-                fontFamily: GoogleFonts.roboto().fontFamily),
+              left: size.width * 0.032, top: size.height * 0.04),
+          child: Container(
+            height: size.height*0.05,
+            width: size.width*0.45,
+            decoration: BoxDecoration(
+              color:const Color.fromARGB(255, 255, 60, 0),
+              borderRadius: BorderRadius.circular(16.0)
+            ),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+              "Recently Viewed",
+              style: TextStyle(
+                  fontSize: size.height * 0.02,
+                  color: Colors.white,
+                  fontFamily: GoogleFonts.roboto().fontFamily),
           ),
+         const Icon(Icons.view_agenda,
+          color: Colors.white,
+          )
+               ] ),
+          )
         ),
         const RecentlyViewed()
        
