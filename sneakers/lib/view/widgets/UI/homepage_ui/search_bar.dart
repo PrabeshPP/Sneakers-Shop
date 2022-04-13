@@ -7,18 +7,12 @@ class SearchBarUI extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Container(
-      height: size.height * 0.06,
-      width: size.width * 0.8,
+      height: size.height * 0.05,
+      width: size.width * 0.7,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(32.0),
           color: Colors.yellow,
-          boxShadow: const [
-            BoxShadow(
-              color: Color.fromARGB(255, 80, 78, 78),
-              offset: Offset(3.0, 3.0),
-              blurRadius: 5.0,
-            )
-          ]),
+         ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [

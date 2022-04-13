@@ -7,6 +7,7 @@ import 'package:nepseapp/model/item.dart';
 import 'package:nepseapp/repository/icons_services.dart';
 import 'package:nepseapp/repository/itemservices.dart';
 import 'package:nepseapp/view/widgets/UI/homepage_ui/home_page_ui.dart';
+import 'package:nepseapp/view/widgets/UI/homepage_ui/search_bar.dart';
 import 'package:nepseapp/view_model/home_Item/Brands/bloc/home_bloc.dart';
 
 class HomePage extends StatelessWidget {
@@ -19,14 +20,29 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final max_size = MediaQuery.of(context).size;
-    return Padding(
-      padding: EdgeInsets.only(top: max_size.height * 0.01),
-      child: BlocProvider(
-        create: (context) =>
-            HomeBloc(iconsServices: iconsServices, itemServices: itemServices)
-              ..add(ItemLoading()),
-        child: const HomePageUI(),
-      ),
+    return BlocProvider(
+      create: (context) =>
+          HomeBloc(iconsServices: iconsServices, itemServices: itemServices)
+            ..add(ItemLoading()),
+      child: Scaffold(
+        appBar: AppBar(
+          elevation: 0.0,
+          leading:Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+             const Icon(CupertinoIcons.qrcode_viewfinder,
+              color: Colors.black,),
+              Text("Scan",
+              style:Theme.of(context).textTheme.caption!.copyWith(
+                color: Colors.black
+              )),
+            ],
+          ),
+          title: const SearchBarUI(),
+        ),
+        body: const HomePageUI(),
+      )
     );
   }
 }
