@@ -16,3 +16,9 @@ A flutter project for sneakers-shop
  <img src="https://github.com/PrabeshPP/Sneakers-Shop/blob/master1.1/sneakers/screenshot/sc.jpg" width="250" height="400">  
 </div>
 
+
+
+https://user-images.githubusercontent.com/83439329/163107423-22a9e441-57fa-413d-9226-bdcf7ef67cf2.mp4
+
+
+
