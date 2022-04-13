@@ -14,20 +14,16 @@ class RecentlyViewed extends StatelessWidget {
       if (state is HomeInitial) {
         return const CircularProgressIndicator();
       } else if (state is ItemLoadedState) {
-        List<Item> list = state.listItems;
-        return Expanded(
-          child: GridView.count(
-            crossAxisCount: 2,
-            crossAxisSpacing: 10,
-            mainAxisSpacing: 10,
-            children: 
-              list.map((item) =>Card(
-                child: Container(
-                  child: Text(item.name),
-                ),
-              )).toList()
-            
-          ),
+        return GridView.builder(
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          itemCount: state.listItems.length,
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            childAspectRatio: 1.4,
+              crossAxisCount: 2),
+          itemBuilder: (context, index) {
+            return CatlogItems(item: state.listItems[index]);
+          },
         );
       } else {
         return const Center(
@@ -48,34 +44,19 @@ class CatlogItems extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 12.0, right: 12.0, top: 10.0),
-      child: Container(
-        decoration: BoxDecoration(
-            color: Theme.of(context).cardColor,
-            borderRadius: BorderRadius.circular(16.0)),
-        child: Column(
-          children: [
-            Container(
-              decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(16.0),
-                      topRight: Radius.circular(16.0))),
-              height: MediaQuery.of(context).size.height * 0.15,
-              width: MediaQuery.of(context).size.width * 0.5,
-              child: Image.asset(
-                item.imageUrl,
-                fit: BoxFit.contain,
-              ),
-            ),
-            Text(
-              item.name,
-              style: TextStyle(
-                  color: Theme.of(context).canvasColor,
-                  fontWeight: FontWeight.bold),
-            ),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(16.0),
+        onTap: (){
 
-            //! Heart and the Buy button Widget container
-            const FooterContainer()
-          ],
+        },
+        child: Ink(
+          decoration: BoxDecoration(
+              color: Theme.of(context).cardColor,
+              borderRadius: BorderRadius.circular(16.0)),
+          child: Image.asset(
+                  item.imageUrl,
+                  fit: BoxFit.contain,
+                ),
         ),
       ),
     );
