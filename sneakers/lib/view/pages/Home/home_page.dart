@@ -26,28 +26,36 @@ class HomePage extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
             elevation: 0.0,
-            leading:IconButton(onPressed: (){
-
-            }, icon:  Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Icon(
-                  CupertinoIcons.qrcode_viewfinder,
-                  color: Colors.black,
-                ),
-                Text("Scan",
-                    style: Theme.of(context)
-                        .textTheme
-                        .caption!
-                        .copyWith(color: Colors.black)),
-              ],
-            ),),
+            leading: IconButton(
+              onPressed: () {},
+              icon: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(
+                    CupertinoIcons.qrcode_viewfinder,
+                    color: Colors.black,
+                  ),
+                  Text("Scan",
+                      style: Theme.of(context)
+                          .textTheme
+                          .caption!
+                          .copyWith(color: Colors.black)),
+                ],
+              ),
+            ),
             title: const SearchBarUI(),
           ),
-          body: const SingleChildScrollView(
-            child: HomePageUI(),
+          body: RefreshIndicator(
+            onRefresh: _onReferesh,
+            child: const SingleChildScrollView(
+              child: HomePageUI(),
+            ),
           ),
         ));
+  }
+
+  Future<void> _onReferesh() async {
+
   }
 }

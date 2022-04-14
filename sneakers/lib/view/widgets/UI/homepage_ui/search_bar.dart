@@ -18,10 +18,11 @@ class SearchBarUI extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.only(left: size.width * 0.07),
-            child: const Icon(Icons.search),
+            child: const Icon(Icons.search,
+            color: Colors.black,),
           ),
           Padding(
-            padding: EdgeInsets.only(left: size.width * 0.2),
+            padding: EdgeInsets.only(left: size.width * 0.15),
             child: Text(
               "Search",
               style: TextStyle(
